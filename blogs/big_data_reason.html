@@ -32,7 +32,13 @@
       <p>Liten's multi-agent platform orchestrates intricate data and AI tasks, automating various engineering processes to enhance productivity and customer satisfaction. Leveraging both best-in-class third-party and proprietary foundational models, its AI agents are fine-tuned according to customer input, ensuring optimal performance. Liten data agents can handle petabytes of big data and are integrated into the platform.</p>
       <br><br>
       <p class="h2">User Interfaces</p>
-      <p>Liten offers a versatile chat interface that operates as a standalone tool accessible from a web browser. Customers have the flexibility to launch the chat within a Jupyter notebook or engage with the hosted Slack bot, conversing with @LitenAI. Our goal is to seamlessly integrate Liten with the tools customers utilize for their work.</p>
+      <p>Liten offers versatile interfaces. They are available on request today. <a href="mailto:hkverma@litenai.com">Click here to email a request.</a></p>
+      <div class="list-group-numbered">
+        <button type="button" class="list-group-item list-group-item-action">Liten standalone chat acts as a smart data copilot. Users can observe data by asking query questions. They can also reason it out using natural languages.</button>
+        <button type="button" class="list-group-item list-group-item-action">Liten can be installed using pip in jupyter notebook. You could use a single send call to do all your reasoning. Liten copilot orchestrates the actions using a master agent to an appropriate data or AI agent. You can try out a sample jupyer notebook on google colab here.</button>
+        <button type="button" class="list-group-item list-group-item-action">Liten is available as a chat bot for slack. You can add @Liten as a bot in your slack, and chat to it to get answers for your data.</button>
+      </div>
+      <br><br>
       <p class="h2">Use Cases</p>
       <p>Here are a few use cases where Liten is able to help customers solve big data reasoning.</p>
       <p class="h3">Querying for policy violations from petabyte of data</p>
@@ -52,36 +58,45 @@
       <br>
       <p class="h4">Streamline Event publishing</p>
       <p>In one of our customers, many alerts are being issued for the same event. Liten can streamline the flow. For this, it stores the alerts. Using its models, it can detect similar events and produce consolidated messages in Slack bots. The flow looks like this</p>
-
-
-
-Sample user reasoning sessions
-
-Liten possesses the capability to comprehend diverse log file formats. Its adaptable data model allows for seamless extensions, facilitating the comprehension of customer-specific data. The finely-tuned models within Liten are adept at understanding domain-specific knowledge. Moreover, Liten can fine-tune models using customer data exclusively for their specific use cases.
-Displayed below are a few chat sessions that serve to demonstrate the functionality and workings of Liten.
-Server log reasoning
-Liten models are finely tuned to execute server log reasoning with an expertise akin to an expert. Here are several examples showcasing the range of analysis it can perform.
-Internal server error analysis
-Users have the ability to upload their data for analysis through Liten's platform. Additionally, Liten manages SQL tables and ingests data into these tables. This enables customers to execute queries, create visualizations, and deduce insights from the data. Moreover, Liten conducts advanced analysis and coordinates both data and AI agents to fulfill various tasks for the users.
-
-Liten is capable of analyzing data and offering error analysis as part of its functionalities.
-
-Customers performed various tasks using chat interfaces like -
-Inquire about the count of 200, 300, 400, and 500 status codes observed by the service in the past hour. Also, seek this information for a specific time range between time <x> and time <y>, using aggregated time-based queries.
-Determine which day of the week typically experiences the highest traffic.
-Identify the time of day when traffic is at its peak.
-Request information about the increase or decrease in traffic volume over the past 12 months.
-
-Linux Log Expert Analysis
-The Linux operating system generates diverse log files including system logs, application logs, and event logs. Liten comprehends these log files and has the capability to analyze failures, offering potential solutions accompanied by code.
-Analysis of syslog error
-Interpreting Linux system logs can be challenging. Liten stores these logs and conducts comprehensive analyses to derive valuable insights. Refer to the following chat for an example of the analysis. 
-
-Users have the ability to inquire about different aspects of Linux log data, such as:
-Determining the frequency of RAM-related CRC errors across all syslogs.
-Crafting a script to parse syslog data and flag RAM as corrupted if more than 10 errors occur within a 24-hour period
-Summary
-Liten streamlines the analysis of extensive datasets through innovative AI and accelerated data agents, simplifying complex reasoning tasks. It unlocks pioneering solutions by harnessing next-generation tools. To experience its capabilities firsthand, it's available for trial now. Contact us for further information.      
+      <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action">Multiple alerts generated for one event.</button>
+        <button type="button" class="list-group-item list-group-item-action">Liten consolidates alerts into its event group.</button>
+        <button type="button" class="list-group-item list-group-item-action">Consolidates it into Slack channels and conversations.</button>
+        <button type="button" class="list-group-item list-group-item-action">LitenBot in Slack answers questions about all the events. It uses finetuned agents for targeted answers.</button>
+      </div>
+      <br><br>
+      <p class="h4">Sample user reasoning sessions</p>
+      <p>Liten possesses the capability to comprehend diverse log file formats. Its adaptable data model allows for seamless extensions, facilitating the comprehension of customer-specific data. The finely-tuned models within Liten are adept at understanding domain-specific knowledge. Moreover, Liten can fine-tune models using customer data exclusively for their specific use cases.</p>
+      <p>Displayed below are a few chat sessions that serve to demonstrate the functionality and workings of Liten.</p>
+      <p class="h5">Server log reasoning</p>
+      <p>Liten models are finely tuned to execute server log reasoning with an expertise akin to an expert. Here are several examples showcasing the range of analysis it can perform.</p>
+      <p class="h5">Internal server error analysis</p>
+      <p>Users have the ability to upload their data for analysis through Liten's platform. Additionally, Liten manages SQL tables and ingests data into these tables. This enables customers to execute queries, create visualizations, and deduce insights from the data. Moreover, Liten conducts advanced analysis and coordinates both data and AI agents to fulfill various tasks for the users.</p>
+      <img class="img-fluid" src="images/server-error-plot-chat.png" alt="Server Error Plot Chat">      
+      <p>Liten is capable of analyzing data and offering error analysis as part of its functionalities.</p>
+      <img class="img-fluid" src="images/internal-server-error-log-chat.png" alt="Internal Server Error">
+      <p>Customers performed various tasks using chat interfaces like -</p>
+      <div class="list-group-numbered">
+        <button type="button" class="list-group-item">Inquire about the count of 200, 300, 400, and 500 status codes observed by the service in the past hour. Also, seek this information for a specific time range between time x and time y, using aggregated time-based queries.</button>
+        <button type="button" class="list-group-item">Determine which day of the week typically experiences the highest traffic.</button>
+        <button type="button" class="list-group-item">Identify the time of day when traffic is at its peak.</button>
+        <button type="button" class="list-group-item">Request information about the increase or decrease in traffic volume over the past 12 months.</button>
+      </div>
+      <br><br>
+      <p class="h4">Linux Log Expert Analysis</p>
+      <p>The Linux operating system generates diverse log files including system logs, application logs, and event logs. Liten comprehends these log files and has the capability to analyze failures, offering potential solutions accompanied by code.</p>
+      <br>
+      <p class="h5">Analysis of syslog error</p>
+      <p>Interpreting Linux system logs can be challenging. Liten stores these logs and conducts comprehensive analyses to derive valuable insights. Refer to the following chat for an example of the analysis.</p>
+      <img class="img-fluid" src="images/syslog-error-chat.png" alt="Syslog Error Chat">
+      <p>Users have the ability to inquire about different aspects of Linux log data, such as<p>
+      <div class="list-group-numbered">
+        <button type="button" class="list-group-item">Crafting a script to parse syslog data and flag RAM as corrupted if more than 10 errors occur within a 24-hour period</button>
+        <button type="button" class="list-group-item">Determining the frequency of RAM-related CRC errors across all syslogs.</button>
+      </div>
+      <br><br>
+      <p class="h3">Summary</p>
+      <p>Liten streamlines the analysis of extensive datasets through innovative AI and accelerated data agents, simplifying complex reasoning tasks. It unlocks pioneering solutions by harnessing next-generation tools. To experience its capabilities firsthand, it's available for trial now. Contact us for further information.</p>
     </div>
   </div>
 </body>
