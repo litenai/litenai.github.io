@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>LitenAI</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link href="css/liten-fluid.css" rel="stylesheet">
-  <style>
-    h1 {text-align: center;}
-    p {text-align: center;}
-  </style>
 </head>
 
 <body>
@@ -36,11 +32,36 @@
         </div>
     </header>
 
-    <div class="container-fluid">
+    <div class="container-fluid" p-5 my-5 bg-white text-dark>
         <h1>Liten Playground</h1>
-        <p>Available on demand now. Please send an email to try out our early access program.</p>
-        <p> TBD - Add colab notebook. Add a video with litenchat for now.</p>
-    </div>
+        <p>
+          Available on demand. Please <a href="index.html#about">contact us</a> to
+          try our early access program or for any information.</p>
+        <p>
+          Liten offers different types of interfaces to chat with data to observe, reason
+          and visualize. They are available on request today.
+          Liten copilot orchestrates the actions using a super agent based on customer prompt
+          with an appropriate workflow od data or AI agent.
+            try out a sample jupyer notebook on google colab.
+        </p>
+        <div class="list-group-numbered">
+          <button type="button" class="list-group-item list-group-item-action">
+            Liten standalone chat acts as a smart data copilot. Users can observe data
+            by asking query questions. They can also reason it out using natural languages.
+          </button>
+          <button type="button" class="list-group-item list-group-item-action">
+            Liten can be installed in a jupyter notebook using python pip. Liten provides
+            a single API call to do all your reasoning. You can try it out in Liten provided
+            sample python notebook.
+          </button>
+          <button type="button" class="list-group-item list-group-item-action">
+            Liten is available as a chat bot for slack. You can add @Liten as a bot
+            in your slack, and chat to it to get answers for your data.
+          </button>
+          <button type="button" class="list-group-item list-group-item-action">
+            Liten is also working on a splunk application.
+          </button>
+        </div>
 
 </body>
 </html>
