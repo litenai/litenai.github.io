@@ -10,56 +10,68 @@
 </head>
 
 <body>
-    <header class="p-3 text-bg-dark">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-                </a>
-
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="index.html#home" class="nav-link px-2 text-white">Home</a></li>
-                    <li><a href="index.html#usecases" class="nav-link px-2 text-white">Use Cases</a></li>
-                    <li><a href="index.html#resources" class="nav-link px-2 text-white">Resources</a></li>
-                    <li><a href="index.html#product" class="nav-link px-2 text-white">Product</a></li>
-                    <li><a href="index.html#about" class="nav-link px-2 text-white">About</a></li>
-                    <li><a href="playground.html" class="nav-link px-2 text-secondary">Playground</a></li>
-                </ul>
-                <div class="text-end">
-                    <p class="h2">LitenAI</p>
-                </div>
-            </div>
+    <header class="p-3 text-bg-dark sticky">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+          </a>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="index.html#home" class="nav-link px-2 link-white">Home</a></li>
+            <li><a href="index.html#product" class="nav-link px-2 link-white">Product</a></li>
+            <li><a href="index.html#usecases" class="nav-link px-2 link-white">Use Cases</a></li>
+            <li><a href="index.html#about" class="nav-link px-2 link-white">About</a></li>
+          </ul>
+          <div class="text-end">
+            <img src="images/litenai-logo-white.png" alt="logo-white" />
+          </div>
         </div>
+      </div>
     </header>
+    <br/><br/><br/><br/><br/><br/>
+    <div class="container-fluid p-5 my-5 text-white playground">
+      <h3 class="justify-content-center">LITENAI PLAYGROUND</h3>
+      <br/>
+      <p class="text-gray">
+        Available on demand. Please <a href="index.html#about" class="link-teal">contact us</a> to
+        try our early access program or for any information.</p>
+      <p class="text-gray">
+        LitenAI offers different types of interfaces to chat with data to observe, reason
+        and visualize. Liten copilot orchestrates the actions using a super agent
+        based on customer prompt with an appropriate workflow of data and AI agents.
+      </p>
+      <div class="list-group-numbered">
+        <button type="button" class="list-group-item list-group-item-action text-gray">
+          LitenAI standalone chat acts as a smart data copilot. Users can observe data
+          by asking query questions. They can also reason it out using natural languages.
+        </button>
+        <button type="button" class="list-group-item list-group-item-action text-gray">
+          LitenAI can be installed in a jupyter notebook using python pip. Liten provides
+          a single API call to do all your reasoning. You can try it out in Liten provided
+          sample python notebook.
+        </button>
+        <button type="button" class="list-group-item list-group-item-action text-gray">
+          LitenAI is available as a chat bot for slack. You can add @Liten as a bot
+          in your slack, and chat to it to get answers for your data.
+        </button>
+        <button type="button" class="list-group-item list-group-item-action text-gray">
+          LitenAI is working on a splunk application.
+        </button>
+      </div>
+    </div>
 
-    <div class="container-fluid" p-5 my-5 bg-white text-dark>
-        <h1>Liten Playground</h1>
-        <p>
-          Available on demand. Please <a href="index.html#about">contact us</a> to
-          try our early access program or for any information.</p>
-        <p>
-          Liten offers different types of interfaces to chat with data to observe, reason
-          and visualize. Liten copilot orchestrates the actions using a super agent
-          based on customer prompt with an appropriate workflow of data and AI agents.
-        </p>
-        <div class="list-group-numbered">
-          <button type="button" class="list-group-item list-group-item-action">
-            Liten standalone chat acts as a smart data copilot. Users can observe data
-            by asking query questions. They can also reason it out using natural languages.
-          </button>
-          <button type="button" class="list-group-item list-group-item-action">
-            Liten can be installed in a jupyter notebook using python pip. Liten provides
-            a single API call to do all your reasoning. You can try it out in Liten provided
-            sample python notebook.
-          </button>
-          <button type="button" class="list-group-item list-group-item-action">
-            Liten is available as a chat bot for slack. You can add @Liten as a bot
-            in your slack, and chat to it to get answers for your data.
-          </button>
-          <button type="button" class="list-group-item list-group-item-action">
-            Liten is working on a splunk application.
-          </button>
-        </div>
-
-</body>
+    <!-- Footer Start -->
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-gray">&copy; 2024 LitenAI</p>
+        <ul class="nav col-md-3 justify-content-center">
+          <li class="nav-item"><a href="#home" class="nav-link px-2 link-gray">Home</a></li>
+          <li class="nav-item"><a href="#product" class="nav-link px-2 link-gray">Product</a></li>
+          <li class="nav-item"><a href="#usecases" class="nav-link px-2 link-gray">Use Cases</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link px-2 link-gray">About</a></li>
+        </ul>
+      </footer>
+    </div>
+    <!-- Footer End -->
+  </body>
 </html>
