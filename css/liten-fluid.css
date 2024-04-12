@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 a.link-gray {
     color: #A0A0A0;
 }
@@ -27,6 +31,20 @@ a.link-teal, a.link-gray:hover, a.link-white:hover {
 
 ul.description > li {
     font-size: 14px;
+}
+
+.intro {
+    background: radial-gradient(50% 50% at 50% 50%, 
+    var(--token-fa493213-d8ad-48fe-9fa5-9f426d9d5ec4, #8737ff) 0%, 
+    rgba(64, 65, 255, 0.3) 54.05495%, 
+    rgba(13, 13, 13, 0) 131.98565%);
+    background: url("images/ai-bg.jpg");
+}
+
+.small-box {
+    width: 60%;
+    max-width: 850px;
+    margin-top: 120px !important;
 }
 
 .intro img {
@@ -151,7 +169,7 @@ div.feature-container > div.summary {
     text-align: center;
 }
 
-div.feature-container > div.summary > button {
+div.feature-container > div.summary > a > button {
     height: 50px;
     background-color: teal;
     border: none;
@@ -178,24 +196,6 @@ div.feature-container > div.summary > button {
 .text-end img {
     width: 120px;
     height: auto;
-}
-
-body {
-    background-color: rgb(13 13 13);
-}
-
-.intro {
-    background: radial-gradient(50% 50% at 50% 50%, 
-    var(--token-fa493213-d8ad-48fe-9fa5-9f426d9d5ec4, #8737ff) 0%, 
-    rgba(64, 65, 255, 0.3) 54.05495%, 
-    rgba(13, 13, 13, 0) 131.98565%);
-    background: url("images/ai-bg.jpg");
-}
-
-.small-box {
-    width: 60%;
-    max-width: 850px;
-    margin-top: 120px !important;
 }
 
 .about {
