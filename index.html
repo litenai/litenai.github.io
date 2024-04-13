@@ -10,8 +10,20 @@
     <link href="css/liten-fluid.css" rel="stylesheet">
   </head>
 
-  <body>
+  <script>
+    function onload() {
+      var menulinks = document.getElementById("menu").children;
+      for (c of menulinks) {
+        c.onclick = function() { 
+          document.getElementById("menu-chkbox").checked = false; 
+        };
+      }
+    }
+  </script>
+
+  <body onload="onload()">
     <!-- Header Start -->
+    <!--
     <header class="p-3 text-bg-dark sticky">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -31,7 +43,49 @@
         </div>
       </div>
     </header>
+    -->
+    <div class="navbar1">
+      <div id="menuToggle">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input id="menu-chkbox" type="checkbox" />
+        
+        <!--
+        Some spans to act as a hamburger.
+        
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        <!--
+        Too bad the menu has to be inside of the button
+        but hey, it's pure CSS magic.
+        -->
+        <ul id="menu">
+          <a href="index.html#home"><li>Home</li></a>
+          <a href="index.html#product"><li>Product</li></a>
+          <a href="index.html#usecases"><li>Use Cases</li></a>
+          <a href="index.html#about"><li>About</li></a>
+          <a href="playground.html"><li>Try playground!</li></a>
+        </ul>
+      </div>
+      <ul>
+        <li><a href="index.html#home" class="nav-link px-2 link-white">Home</a></li>
+        <li><a href="index.html#product" class="nav-link px-2 link-white">Product</a></li>
+        <li><a href="index.html#usecases" class="nav-link px-2 link-white">Use Cases</a></li>
+        <li><a href="index.html#about" class="nav-link px-2 link-white">About</a></li>
+        <li><a href="playground.html" class="nav-link px-2 link-white">Try Playground!!</a></li>
+      </ul>
+      <img src="images/litenai-logo-white.png" alt="logo-white" />
+    </div>
     <!-- Header End -->
+
+    <div id="home" class="marker">&nbsp;</div>
 
     <!-- Introduction Start -->
     <div class="intro">
@@ -54,8 +108,10 @@
     </div>
     <!-- Introduction End -->
 
+    <div id="product" class="marker">&nbsp;</div>
+
     <!-- Product Start -->
-    <div id="product" class="container-fluid p-5 my-5 bg-black text-white">
+    <div class="container-fluid p-5 my-5 bg-black text-white">
       <p class="h5 text-center">MULTI AGENT PLATFORM WITH AI AND DATA AGENTS</p>
       <div class="product">
         <img src="images/litenai-architecture.png" alt="Architecture" />
@@ -112,8 +168,11 @@
     </div>
     <!-- Product End -->
     <hr/>
+
+    <div id="usecases" class="marker">&nbsp;</div>
+
     <!-- Use Cases Start -->
-    <div id="usecases" class="container-fluid p-5 my-5 bg-black text-white">
+    <div class="container-fluid p-5 my-5 bg-black text-white">
       <p class="h5 text-center">USE CASES</p>
       <div class="feature-container">
         <p class="h6">BIG DATA REASONING</p>
@@ -389,9 +448,11 @@
     </div>
     <!-- Use Cases End -->
 
+    <div id="about" class="marker">&nbsp;</div>
+
     <!-- About Start -->
     <div class="container-fluid p-5 my-5 bg-white text-dark about">
-      <p id="about" class="h3 text-center">ABOUT</p>
+      <p class="h3 text-center">ABOUT</p>
       <img class="float-start img-fluid" src="images/litenai-logo.png" alt="Liten">
       <p>
         LitenAI, a Silicon Valley startup, champions a cutting-edge multi-agent platform designed
