@@ -111,7 +111,7 @@
       </div>
     </div>
     <!-- Product End -->
-
+    <hr/>
     <!-- Use Cases Start -->
     <div id="usecases" class="container-fluid p-5 my-5 bg-black text-white">
       <p class="h5 text-center">USE CASES</p>
@@ -322,23 +322,24 @@
                 (User Defined Functions) tailored to individual customer requirements. These UDFs can be applied within queries 
                 or used as standalone functions, offering valuable solutions for specific customer use cases.
               </p>
-              <ul>
-                <li class="text-gray">
-                  One of our clients hosts extensive network traffic data in the cloud, reaching volumes that can span into petabytes
-                  becoming cost prohibitive. LitenAI offers a big data solution capable of storing limitless log data. It employs 
-                  industry-standard open data lake format delta-lake for data storage. Specifically, in this scenario, data is stored 
-                  in partitions categorized by traffic timestamps.
-                </li>
-                <li class="text-gray">
-                  To address company needs and inquiries, they regularly query these files to detect policy violations. However, this 
-                  process became notably slow, hindering their ability to meet service level requirements. To tackle this, LitenAI 
-                  incorporates an acceleration layer by storing data in a tensor-formatted file. This diminishes the necessity for 
-                  cross-referencing and joining with additional data dimensions. As a result, Liten expedited the customer's query, 
-                  delivering the sought-after policy answers promptly.
-                </li>
-              </ul>
             </div>
           </div>
+          <div class="example-container">
+            <div class="example">
+              One of our clients hosts extensive network traffic data in the cloud, reaching volumes that can span into petabytes
+              becoming cost prohibitive. LitenAI offers a big data solution capable of storing limitless log data. It employs 
+              industry-standard open data lake format delta-lake for data storage. Specifically, in this scenario, data is stored 
+              in partitions categorized by traffic timestamps.
+            </div>
+            <div class="example">
+              To address company needs and inquiries, they regularly query these files to detect policy violations. However, this 
+              process became notably slow, hindering their ability to meet service level requirements. To tackle this, LitenAI 
+              incorporates an acceleration layer by storing data in a tensor-formatted file. This diminishes the necessity for 
+              cross-referencing and joining with additional data dimensions. As a result, Liten expedited the customer's query, 
+              delivering the sought-after policy answers promptly.
+            </div>
+          </div>
+
           <div class="sample-container container-bg-teal">
             <p class="h7">BENCHMARK TPCH QUERY</p>
             <p class="text-lightgray description">
