@@ -1,6 +1,533 @@
+body {
+    background-color: black;
+}
+
+a.link-gray {
+    color: #A0A0A0;
+}
+
+a.link-white {
+    color: #fff;
+}
+
+a.link-teal, a.link-gray:hover, a.link-white:hover {
+    color: #008080;
+}
+
+hr {
+    color: #A0A0A0;
+    margin: 40px;
+}
+
 .container-bg-teal {
     background: #008080 
 }
+
 .container-bg-darkteal {
     background: #004040
+}
+
+.text-gray {
+    color: #A0A0A0;
+}
+
+.text-lightgray {
+    color: #D0D0D0;
+}
+
+ul.description > li {
+    font-size: 14px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(3px);
+    z-index: 999;
+  }
+
+div.navbar1 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: radial-gradient(circle at 24.1% 68.8%, rgba(50, 50, 50, .6) 0%, rgb(0, 0, 0) 99.4%);
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 20px;
+}
+
+div.navbar1 > ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    align-self: center;
+}
+
+div.navbar1 > img {
+    width: 80px;
+    height: auto;
+}
+
+/* Menu start */
+#menuToggle
+{
+  display: none;
+  align-self: center;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  border-radius: 10px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+/* Menu end */
+
+.marker {
+    height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.intro {
+    width: 100%;
+    margin: auto;
+}
+
+.intro img {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit:fill;
+    opacity: 0.5;
+}
+
+.intro > .small-box {
+    width: 60%;
+    max-width: 850px;
+    margin: auto;
+    margin-top: 120px !important;
+    text-align: center;
+}
+
+.product-container {
+    margin-top: 80px;
+    padding-top: 40px;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.product img {
+    width: 60%;
+    min-width: 500px;
+    height: auto;
+    object-fit: contain;
+    align-self: flex-start;
+}
+
+.product .description {
+    align-self: flex-start;
+}
+
+.product .description .title {
+    color: teal;
+    font-weight: bold;
+}
+
+div.feature-container {
+    width: 94%;
+    max-width: 1500px;
+    padding: 60px;
+    margin: auto;
+    margin-top: 40px;
+    border: 0.2px solid #A0A0A0;
+    border-radius: 10px;
+}
+
+div.feature-container .features {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+div.feature-container .features > div > div.header {
+    display: flex;
+    gap: 10px;
+    width: 220px;
+    margin: auto;
+}
+
+div.feature-container .features > div > div.header > img {
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+div.feature-container .features > div {
+    color: #fff;
+    height: 100%;
+    background: #004040;
+    text-align: left;
+    cursor: default;
+    padding: 20px;
+    flex: 1;
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+}
+
+div.feature-container .features > div > img {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 30px;
+    height: auto;
+}
+
+div.feature-container .features > div > p.h7 {
+    margin-left: 40px;
+}
+
+div.feature-container > div.sample-container {
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.feature-container > div.example-container {
+    display: flex;
+    max-width: 1500px;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-container > div.example-container > div.example {
+    background: linear-gradient(0deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+    border-radius: 10px;
+    padding: 20px;
+    color: #A0A0A0;
+    flex: 1;
+}
+
+div.use-cases {
+    margin-top: 100px;
+}
+
+div.use-case {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+div.use-case > img {
+    width: 60%;
+    min-width: 500px;
+    height: auto;
+    object-fit: contain;
+    align-self: flex-start;
+}
+
+div.use-case p.description {
+    font-size: 14px;
+}
+
+.title-small {
+    display: none;
+}
+
+.title-large {
+    display: block;
+}
+
+div.feature-container > div.summary {
+    width: 70%;
+    margin: auto;
+    margin-top: 60px;
+    text-align: center;
+}
+
+div.feature-container > div.summary > a > button {
+    height: 50px;
+    background-color: teal;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 30px 10px 30px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.text-bg-dark {
+    color: #fff !important;
+    background-color: RGBA(var(--bs-dark-rgb), var(--bs-bg-opacity, 0.95)) !important;
+}
+
+.text-end img {
+    width: 120px;
+    height: auto;
+}
+
+.about {
+    width: 90%;
+    max-width: 1500px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.about-description {
+    display: flex;
+}
+
+.about-description > p {
+    align-self: center;
+    text-align: left;
+}
+
+.about-contacts {
+    margin: auto;
+}
+
+.about-contacts > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.playground {
+    background-color: black;
+    width: 90%;
+    max-width: 1500px;
+    border-radius: 10px;
+    padding: 40px;
+    margin: auto;
+}
+
+.playground > ul {
+    padding: 0 0 0 14px;
+}
+
+.playground > ul > li {
+    color: #A0A0A0;
+}
+
+@media (max-width: 576px) {
+    div.navbar1 > ul {
+        display: none;
+    }
+
+    #menuToggle {
+        display: block;
+    }
+
+    .intro > .small-box {
+        width: 100%;
+        padding: 0 20px 0 20px;
+    }
+
+    .product {
+        display: block;
+    }
+
+    .product-container {
+        padding: 40px 20px 0 20px;
+    }
+
+    .product img {
+        width: 100%;
+        min-width: unset;
+    }
+
+    div.feature-container {
+        padding: 20px;
+    }
+
+    div.feature-container .features {
+        display: block;
+    }
+
+    div.feature-container .features > div {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    div.use-case {
+        display: block;
+    }
+
+    div.use-case > img {
+        width: 100%;
+        min-width: unset;
+        margin-bottom: 10px;
+    }
+
+    .title-small {
+        display: block;
+    }
+    
+    .title-large {
+        display: none;
+    }
+
+    div.feature-container > div.summary {
+        width: 96%;
+        margin: auto;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .feature-container > div.example-container {
+        display: block;
+    }
+
+    .about-description {
+        display: block;
+    }
+
+    .playground {
+        width: 100%;
+        padding: 20px;
+    }
 }
