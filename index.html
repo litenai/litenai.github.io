@@ -88,12 +88,11 @@
     <div id="home" class="marker">&nbsp;</div>
 
     <!-- Introduction Start -->
-    <div class="intro">
+   <div class="intro">
       <img src="images/ai-bg.jpg" alt="Title" />
-      <div class="container-fluid p-5 text-white my-5 small-box">
+      <div class="small-box">
         
-        <!--<p id="home" class="h1 text-center">Welcome to LitenAI</p>-->
-        <p class="h1 text-center">
+        <p class="h1 text-white text-center">
           Are you tired of reasoning through mountains of data with slow queries?
         <p>
         <br>
@@ -111,7 +110,7 @@
     <div id="product" class="marker">&nbsp;</div>
 
     <!-- Product Start -->
-    <div class="container-fluid p-5 my-5 bg-black text-white">
+    <div class="product-container bg-black text-white">
       <p class="h5 text-center">MULTI AGENT PLATFORM WITH AI AND DATA AGENTS</p>
       <div class="product">
         <img src="images/litenai-architecture.png" alt="Architecture" />
@@ -167,12 +166,15 @@
       </div>
     </div>
     <!-- Product End -->
+
     <hr/>
 
     <div id="usecases" class="marker">&nbsp;</div>
 
     <!-- Use Cases Start -->
-    <div class="container-fluid p-5 my-5 bg-black text-white">
+    
+    <!--<div class="container-fluid p-5 my-5 bg-black text-white">-->
+    <div class="use-cases bg-black text-white">
       <p class="h5 text-center">USE CASES</p>
       <div class="feature-container">
         <p class="h6">BIG DATA REASONING</p>
@@ -258,9 +260,10 @@
             using customer data exclusively for their specific use cases.
           </p>
           <div class="use-case">
+            <p class="h7 title-small">SERVER LOG REASONING</p>
             <img class="img-fluid" src="images/server-error-plot-chat.png" alt="Server Error Plot Chat">
             <div>
-              <p class="h7">SERVER LOG REASONING</p>
+              <p class="h7 title-large">SERVER LOG REASONING</p>
               <p class="text-lightgray description">
                 LitenAI models are finely tuned to execute server log reasoning with an
                 expertise akin to an expert. Here are several examples showcasing the range of
@@ -305,9 +308,10 @@
           </div>
           <br/><br/>
           <div class="use-case">
+            <p class="h7 title-small">LINUX LOG EXPERT ANALYSIS</p>
             <img class="img-fluid" src="images/syslog-error-chat.png" alt="Syslog Error Chat">
             <div>
-              <p class="h7">LINUX LOG EXPERT ANALYSIS</p>
+              <p class="h7 title-large">LINUX LOG EXPERT ANALYSIS</p>
               <p class="text-lightgray description">
                 The Linux operating system generates diverse log files including system logs,
                 application logs, and event logs. LitenAI comprehends these log files and has the
@@ -409,9 +413,10 @@
               cache of tensors to eliminate redundant creation processes.
             </p>
             <div class="use-case">
+              <p class="h7 title-small">TPCH Query 5</p>
               <img class="img-fluid" src="images/tpch-query5.png" alt="TPCH Query 5" />
               <div>
-                <p class="h7">TPCH Query 5</p>
+                <p class="h7 title-large">TPCH Query 5</p>
                 <p class="text-lightgray description">
                   This query compiles the revenue generated from local suppliers.
                 </p>
@@ -423,9 +428,10 @@
               </div>
             </div>
             <div class="use-case">
+              <p class="h7 title-small">TPCH Query 6</p>
               <img class="img-fluid" src="images/tpch-query6.png" alt="TPCH Query 6" />
               <div>
-                <p class="h7">TPCH Query 6</p>
+                <p class="h7 title-large">TPCH Query 6</p>
                 <p class="text-lightgray description">
                   This query assesses the potential revenue growth achievable by removing company-wide discounts.
                 </p>
@@ -451,24 +457,23 @@
     <div id="about" class="marker">&nbsp;</div>
 
     <!-- About Start -->
-    <div class="container-fluid p-5 my-5 bg-white text-dark about">
+    <div class="bg-white text-dark about">
       <p class="h3 text-center">ABOUT</p>
-      <img class="float-start img-fluid" src="images/litenai-logo.png" alt="Liten">
-      <p>
-        LitenAI, a Silicon Valley startup, champions a cutting-edge multi-agent platform designed
-        to observe, reason, and act upon data. Its founders possess extensive expertise in AI
-        and data applications and have a proven track record of accelerating platform development
-        for superior performance. They bring valuable experience in optimizing Apache SparkTM
-        performance for large-scale distributed analytics.
-      </p>
-      <div class="row">
-        <p class="h6 col-md-4">LitenAI Contacts</p>
-        <div class="col mb-3">
-        <ul class="nav col-md-5 justify-content-left">
-          <li class="nav-item"><b>Email: </b>hkverma@litenai.com</li>
-          <li class="nav-item"><b>Phone: </b>+1 (408) 952 9571</li>
+      <div class="about-description">
+        <img src="images/litenai-logo.png" alt="Liten">
+        <p>
+          LitenAI, a Silicon Valley startup, champions a cutting-edge multi-agent platform designed
+          to observe, reason, and act upon data. Its founders possess extensive expertise in AI
+          and data applications and have a proven track record of accelerating platform development
+          for superior performance. They bring valuable experience in optimizing Apache SparkTM
+          performance for large-scale distributed analytics.
+        </p>
+      </div>
+      <div class="about-contacts">
+        <ul>
+          <li><b>Email: </b>hkverma@litenai.com</li>
+          <li><b>Phone: </b>+1 (408) 952 9571</li>
         </ul>
-        </div>
       </div>
     </div>
     <!-- About End -->
@@ -477,7 +482,7 @@
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-gray">&copy; 2024 LitenAI</p>
-        <ul class="nav col-md-4 justify-content-center">
+        <ul class="nav col-md-5 justify-content-center">
           <li class="nav-item"><a href="#home" class="nav-link px-2 link-gray">Home</a></li>
           <li class="nav-item"><a href="#product" class="nav-link px-2 link-gray">Product</a></li>
           <li class="nav-item"><a href="#usecases" class="nav-link px-2 link-gray">Use Cases</a></li>

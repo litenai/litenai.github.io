@@ -39,12 +39,6 @@ ul.description > li {
     font-size: 14px;
 }
 
-.small-box {
-    width: 60%;
-    max-width: 850px;
-    margin-top: 120px !important;
-}
-
 .sticky {
     position: fixed;
     top: 0;
@@ -242,6 +236,19 @@ div.navbar1 > img {
     opacity: 0.5;
 }
 
+.intro > .small-box {
+    width: 60%;
+    max-width: 850px;
+    margin: auto;
+    margin-top: 120px !important;
+    text-align: center;
+}
+
+.product-container {
+    margin-top: 80px;
+    padding-top: 40px;
+}
+
 .product {
     display: flex;
     justify-content: center;
@@ -268,7 +275,7 @@ div.navbar1 > img {
 }
 
 div.feature-container {
-    width: 100%;
+    width: 94%;
     max-width: 1500px;
     padding: 60px;
     margin: auto;
@@ -344,6 +351,10 @@ div.feature-container > div.sample-container {
     flex: 1;
 }
 
+div.use-cases {
+    margin-top: 100px;
+}
+
 div.use-case {
     display: flex;
     gap: 30px;
@@ -360,6 +371,14 @@ div.use-case > img {
 
 div.use-case p.description {
     font-size: 14px;
+}
+
+.title-small {
+    display: none;
+}
+
+.title-large {
+    display: block;
 }
 
 div.feature-container > div.summary {
@@ -393,6 +412,28 @@ div.feature-container > div.summary > a > button {
     width: 90%;
     max-width: 1500px;
     border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.about-description {
+    display: flex;
+}
+
+.about-description > p {
+    align-self: center;
+    text-align: left;
+}
+
+.about-contacts {
+    margin: auto;
+}
+
+.about-contacts > ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 .playground {
@@ -400,6 +441,16 @@ div.feature-container > div.summary > a > button {
     width: 90%;
     max-width: 1500px;
     border-radius: 10px;
+    padding: 40px;
+    margin: auto;
+}
+
+.playground > ul {
+    padding: 0 0 0 14px;
+}
+
+.playground > ul > li {
+    color: #A0A0A0;
 }
 
 @media (max-width: 576px) {
@@ -409,5 +460,74 @@ div.feature-container > div.summary > a > button {
 
     #menuToggle {
         display: block;
+    }
+
+    .intro > .small-box {
+        width: 100%;
+        padding: 0 20px 0 20px;
+    }
+
+    .product {
+        display: block;
+    }
+
+    .product-container {
+        padding: 40px 20px 0 20px;
+    }
+
+    .product img {
+        width: 100%;
+        min-width: unset;
+    }
+
+    div.feature-container {
+        padding: 20px;
+    }
+
+    div.feature-container .features {
+        display: block;
+    }
+
+    div.feature-container .features > div {
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    div.use-case {
+        display: block;
+    }
+
+    div.use-case > img {
+        width: 100%;
+        min-width: unset;
+        margin-bottom: 10px;
+    }
+
+    .title-small {
+        display: block;
+    }
+    
+    .title-large {
+        display: none;
+    }
+
+    div.feature-container > div.summary {
+        width: 96%;
+        margin: auto;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .feature-container > div.example-container {
+        display: block;
+    }
+
+    .about-description {
+        display: block;
+    }
+
+    .playground {
+        width: 100%;
+        padding: 20px;
     }
 }

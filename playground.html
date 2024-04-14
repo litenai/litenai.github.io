@@ -10,26 +10,48 @@
 </head>
 
 <body>
-    <header class="p-3 text-bg-dark sticky">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-          </a>
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="index.html#home" class="nav-link px-2 link-white">Home</a></li>
-            <li><a href="index.html#product" class="nav-link px-2 link-white">Product</a></li>
-            <li><a href="index.html#usecases" class="nav-link px-2 link-white">Use Cases</a></li>
-            <li><a href="index.html#about" class="nav-link px-2 link-white">About</a></li>
-          </ul>
-          <div class="text-end">
-            <img src="images/litenai-logo-white.png" alt="logo-white" />
-          </div>
-        </div>
+    <!-- Header Start -->
+    <div class="navbar1">
+      <div id="menuToggle">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input id="menu-chkbox" type="checkbox" />
+        
+        <!--
+        Some spans to act as a hamburger.
+        
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+        <span></span>
+        <span></span>
+        <span></span>
+        
+        <!--
+        Too bad the menu has to be inside of the button
+        but hey, it's pure CSS magic.
+        -->
+        <ul id="menu">
+          <a href="index.html#home"><li>Home</li></a>
+          <a href="index.html#product"><li>Product</li></a>
+          <a href="index.html#usecases"><li>Use Cases</li></a>
+          <a href="index.html#about"><li>About</li></a>
+        </ul>
       </div>
-    </header>
-    <br/><br/><br/><br/><br/><br/>
-    <div class="container-fluid p-5 my-5 text-white playground">
+      <ul>
+        <li><a href="index.html#home" class="nav-link px-2 link-white">Home</a></li>
+        <li><a href="index.html#product" class="nav-link px-2 link-white">Product</a></li>
+        <li><a href="index.html#usecases" class="nav-link px-2 link-white">Use Cases</a></li>
+        <li><a href="index.html#about" class="nav-link px-2 link-white">About</a></li>
+      </ul>
+      <img src="images/litenai-logo-white.png" alt="logo-white" />
+    </div>
+    <!-- Header End -->
+
+    <br/><br/><br/><br/>
+    <div class="text-white playground">
       <h3 class="justify-content-center">LITENAI PLAYGROUND</h3>
       <br/>
       <p class="text-gray">
@@ -40,23 +62,23 @@
         and visualize. Liten copilot orchestrates the actions using a super agent
         based on customer prompt with an appropriate workflow of data and AI agents.
       </p>
-      <div class="list-group-numbered">
-        <button type="button" class="list-group-item list-group-item-action text-gray">
+      <ul>
+        <li>
           LitenAI standalone chat acts as a smart data copilot. Users can observe data
           by asking query questions. They can also reason it out using natural languages.
-        </button>
-        <button type="button" class="list-group-item list-group-item-action text-gray">
+        </li>
+        <li>
           LitenAI can be installed in a jupyter notebook using python pip. Liten provides
           a single API call to do all your reasoning. You can try it out in Liten provided
           sample python notebook.
-        </button>
-        <button type="button" class="list-group-item list-group-item-action text-gray">
+        </li>
+        <li>
           LitenAI is available as a chat bot for slack. You can add @Liten as a bot
           in your slack, and chat to it to get answers for your data.
-        </button>
-        <button type="button" class="list-group-item list-group-item-action text-gray">
+        </li>
+        <li>
           LitenAI is working on a splunk application.
-        </button>
+        </li>
       </div>
     </div>
 
@@ -64,7 +86,7 @@
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-gray">&copy; 2024 LitenAI</p>
-        <ul class="nav col-md-3 justify-content-center">
+        <ul class="nav col-md-4 justify-content-center">
           <li class="nav-item"><a href="index.html#home" class="nav-link px-2 link-gray">Home</a></li>
           <li class="nav-item"><a href="index.html#product" class="nav-link px-2 link-gray">Product</a></li>
           <li class="nav-item"><a href="index.html#usecases" class="nav-link px-2 link-gray">Use Cases</a></li>
