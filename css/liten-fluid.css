@@ -364,15 +364,15 @@ div.use-case {
 
 div.use-case > img {
     width: 60%;
-    min-width: 500px;
     height: auto;
     object-fit: contain;
     align-self: flex-start;
+    border-radius: 10px;
 }
 
 div.use-case.data-agent > img {
     width: 50%;
-    min-width: 400px;
+    /*min-width: 400px;*/
 }
 
 div.use-case p.description {
@@ -499,11 +499,12 @@ div.feature-container > div.summary > a > button {
         margin-top: 20px;
     }
 
-    div.use-case {
+    div.use-case, div.use-case.data-agent {
         display: block;
     }
 
-    div.use-case > img {
+    div.use-case > img,
+    div.use-case.data-agent > img {
         width: 100%;
         min-width: unset;
         margin-bottom: 10px;
