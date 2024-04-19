@@ -253,13 +253,14 @@ div.navbar1 > img {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
+    gap: 30px;
 }
 
 .product img {
     width: 60%;
-    min-width: 500px;
+    min-width: 400px;
     height: auto;
     object-fit: contain;
     align-self: flex-start;
@@ -363,10 +364,15 @@ div.use-case {
 
 div.use-case > img {
     width: 60%;
-    min-width: 500px;
     height: auto;
     object-fit: contain;
     align-self: flex-start;
+    border-radius: 10px;
+}
+
+div.use-case.data-agent > img {
+    width: 50%;
+    /*min-width: 400px;*/
 }
 
 div.use-case p.description {
@@ -493,11 +499,12 @@ div.feature-container > div.summary > a > button {
         margin-top: 20px;
     }
 
-    div.use-case {
+    div.use-case, div.use-case.data-agent {
         display: block;
     }
 
-    div.use-case > img {
+    div.use-case > img,
+    div.use-case.data-agent > img {
         width: 100%;
         min-width: unset;
         margin-bottom: 10px;
