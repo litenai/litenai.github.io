@@ -459,6 +459,28 @@ div.feature-container > div.summary > a > button {
     color: #A0A0A0;
 }
 
+/* Start Contact form */
+
+.invalid-feedback,
+.empty-feedback {
+  display: none;
+}
+
+.was-validated :placeholder-shown:invalid ~ .empty-feedback {
+  display: block;
+}
+
+.was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+  display: block;
+}
+
+.is-invalid,
+.was-validated :invalid {
+  border-color: #dc3545;
+}
+
+/* End Contact form */
+
 @media (max-width: 576px) {
     div.navbar1 > ul {
         display: none;
