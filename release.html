@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZQSL0BY68"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZQSL0BY68');
+  </script>
+  <title>LitenAI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="css/liten-fluid.css" rel="stylesheet">
+
+  <script language="javascript">
+    function addFormValidation() {
+      "use strict";
+      /*
+      * Form Validation
+      */
+
+      // Fetch all the forms we want to apply custom validation styles to
+      const forms = document.querySelectorAll(".needs-validation");
+      const result = document.getElementById("result");
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+          "submit",
+          function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+
+              form.querySelectorAll(":invalid")[0].focus();
+            } else {
+              /*
+              * Form Submission using fetch()
+              */
+
+              const formData = new FormData(form);
+              event.preventDefault();
+              event.stopPropagation();
+              const object = {};
+              formData.forEach((value, key) => {
+                object[key] = value;
+              });
+              const json = JSON.stringify(object);
+              result.innerHTML = "Please wait...";
+
+              fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Accept: "application/json"
+                },
+                body: json
+              })
+                .then(async (response) => {
+                  let json = await response.json();
+                  if (response.status == 200) {
+                    result.innerHTML = json.message;
+                    result.classList.remove("text-gray-500");
+                    result.classList.add("text-green-500");
+                  } else {
+                    console.log(response);
+                    result.innerHTML = json.message;
+                    result.classList.remove("text-gray-500");
+                    result.classList.add("text-red-500");
+                  }
+                })
+                .catch((error) => {
+                  console.log(error);
+                  result.innerHTML = "Something went wrong!";
+                })
+                .then(function () {
+                  form.reset();
+                  form.classList.remove("was-validated");
+                  setTimeout(() => {
+                    result.style.display = "none";
+                  }, 5000);
+                });
+            }
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    }
+    window.onload = addFormValidation;
+  </script>
+
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="navbar1">
+      <div id="menuToggle">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input id="menu-chkbox" type="checkbox" />
+
+        <!--
+        Some spans to act as a hamburger.
+
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <!--
+        Too bad the menu has to be inside of the button
+        but hey, it's pure CSS magic.
+        -->
+        <ul id="menu">
+          <a href="index.html#home"><li>Home</li></a>
+          <a href="index.html#product"><li>Product</li></a>
+          <a href="index.html#usecases"><li>Use Cases</li></a>
+          <a href="index.html#about"><li>About</li></a>
+        </ul>
+      </div>
+      <ul>
+        <li><a href="index.html#home" class="nav-link px-2 link-white">Home</a></li>
+        <li><a href="index.html#product" class="nav-link px-2 link-white">Product</a></li>
+        <li><a href="index.html#usecases" class="nav-link px-2 link-white">Use Cases</a></li>
+        <li><a href="index.html#about" class="nav-link px-2 link-white">About</a></li>
+      </ul>
+      <img src="images/litenai-logo-white.png" alt="logo-white" />
+    </div>
+    <!-- Header End -->
+
+    <br/><br/><br/><br/>
+    <div class="text-white playground">
+      <h3 class="justify-content-center">LITENAI RELEASE NOTES</h3>
+      <br/>
+      <p class="text-gray">
+        LitenAI is an AI engineer offering technical support and debug. It
+	orchestrates LitenAI agents to observe, reason and visualize petabyte scale
+	of data. Liten accelerated data layer can search through big data using
+	python and SQL. Liten data can ingest all customer knowledge from text, pdf,
+	html or other media files. LitenAI agents provide unique insights from the
+	securely integrated knowledge and structured data.
+	LitenAI engineer left shifts technical support, and reduces response times
+	to critical issues significantly. It is being evaluated by many high tech
+	companies.
+      </p>
+      <p class="text-gray">
+        Please <a href="release_notes.html#contact-form" class="link-teal">contact us</a> for our docker install to try out 
+        early access program or for any information.</p>
+    </div>
+
+    <div id="contact-form" class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900" style="background-color: black;">
+      <div class="container mx-auto">
+        <div class="max-w-xl mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+          <div class="text-center">
+            <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
+              Contact Us
+            </h1>
+            <p class="text-gray-400 dark:text-gray-400">
+              Fill up the form below to send us a message.
+            </p>
+          </div>
+          <div class="m-7">
+            <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
+              <input type="hidden" name="access_key" value="9a4a0ba4-d97e-441b-a8f4-5f6ad3d8e0b9" />
+              <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+              <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+              <div class="flex mb-6 space-x-4">
+                <div class="w-full md:w-1/2">
+                  <label for="fname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">First Name</label>
+                  <input type="text" name="name" id="first_name" placeholder="John" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                    Please provide your first name.
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                  <label for="lname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Last Name</label>
+                  <input type="text" name="last_name" id="lname" placeholder="Doe" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                    Please provide your last name.
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex mb-6 space-x-4">
+                <div class="w-full md:w-1/2">
+                  <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+                  <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+                  <div class="empty-feedback text-red-400 text-sm mt-1">
+                    Please provide your email address.
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <label for="phone" class="block text-sm mb-2 text-gray-600 dark:text-gray-400">Phone Number</label>
+                  <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+
+                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                    Please provide your phone number.
+                  </div>
+                </div>
+              </div>
+              <div class="mb-6">
+                <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
+
+                <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" required></textarea>
+                <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                  Please enter your message.
+                </div>
+              </div>
+              <div class="mb-6">
+                <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
+                  Send Message
+                </button>
+              </div>
+              <p class="text-base text-center text-gray-400" id="result"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-gray">&copy; 2024 LitenAI</p>
+        <ul class="nav col-md-4 justify-content-center">
+          <li class="nav-item"><a href="index.html#home" class="nav-link px-2 link-gray">Home</a></li>
+          <li class="nav-item"><a href="index.html#product" class="nav-link px-2 link-gray">Product</a></li>
+          <li class="nav-item"><a href="index.html#usecases" class="nav-link px-2 link-gray">Use Cases</a></li>
+          <li class="nav-item"><a href="index.html#about" class="nav-link px-2 link-gray">About</a></li>
+        </ul>
+      </footer>
+    </div>
+    <!-- Footer End -->
+  </body>
+</html>
