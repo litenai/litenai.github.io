@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZQSL0BY68"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7ZQSL0BY68');
+  </script>
+  <title>LitenAI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="css/liten-fluid.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header Start -->
+    <div class="navbar1">
+      <img src="images/litenai-logo-white.png" alt="logo-white" />
+    </div>
+    <!-- Header End -->
+
+    <br/><br/><br/><br/>
+    <div class="text-white playground">
+      <h3 class="justify-content-center">LITENAI RELEASE NOTES</h3>
+      <br/>
+      <p class="text-gray">
+        LitenAI is an AI engineer automating technical support and debug.
+      </p>
+      <p class="text-gray">
+	It orchestrates LitenAI agents to observe, reason and visualize petabyte scales of data. Liten lake ingests structured data, logs or metrics to enable accelerated search through big data using python and SQL. It also ingests all customer knowledge from text, pdf,	html or other media files. This knowledge base is used by agents to provide unique insight from the securely integrated knowledge and structured data lake. LitenAI engineer left shifts technical support, and reduces response times to critical issues by 100x by removing engineering expertise bottlenecks. It is being evaluated by many companies.
+      </p>
+      <p class="text-gray">
+        Please <a href="mailto:hkverma@litenai.com" class="link-teal">contact us</a> for access to our docker install to try out early access program or for any other information.
+      </p>
+      <br>
+      <h3 class="justify-content-center">DOCKER INSTALL DIRECTIONS</h3>
+      <br/>
+      <p class="text-gray">
+	Please download the docker image from (LitenAI store)[https://drive.google.com/file/d/17kdZ26SC56GEpu-e1QyxxqyuyS8ritas/view?usp=drive_link]. Once downloaded follow the following directions to run and test it locally. All data is local and accessible only to the user. LitenAI does not collect any data from this use.
+      </p>
+      <br>
+      <p class="text-gray">
+	<ul>
+	  <li>
+	    Ensure that docker is installed and daemon running. USER should also be in the docker group. Follow the directions from (docker website)[https://docs.docker.com/engine/install/linux-postinstall]
+	  </li>
+	  <li>
+	    Load the image from the downloaded image.For this do the following as (shown here)[https://docs.docker.com/reference/cli/docker/image/load/]<br>
+	    <code>docker load < litenai.v0.0.78.tar.gz</code><br>
+	  </li>
+	  <li>
+	    To run the docker, you can set the following variables. <br>
+	    Set API key to a valid OpenAI API key if using OpenAI. Set it to the API key if a local install is being used.<br>
+            <code>export LITENAI_API_KEY=<api_key></code>
+	    If being served locally, the url to be used for LLM call and LLM Model being used are needed. LitenAI supports many LLMs. We also have local LLM installation images, we can help with deploying and serving LLMs of interest. Set these only if local LLM serve is being used. An example setting is shown below.<br>
+	    <code>export LITENAI_SERVE_URL="http://localhost:8000/v1"</code><br>
+	    <code>export LITENAI_LLM_MODEL="meta-llama/Llama-3.2-1B-Instruct"</code><br>
+	  </li>
+	  <li>
+	    LitenAI agents can be tuned to customer requirements. By default, the docker file provides a local lake with AI agents tuned for log reasoning. For this mode, you dont need to set these environment variables<br>
+	    However, we also provide an agentic onfiguration with sample lake tuned to assist field technicians providing technical support for medical and industrial device. If you wish to use in this techassist mode, please set these variables.
+	    <code>LITENAI_AGENTIC_MODE='techassist'</code><br>
+	    <code>LITENAI_LAKE_URL='/srv/lake/techassist'</code><br>
+	  </li>
+	  <p class="text=gray">
+	    Find the litenai tag version that you want to run. Tags can be seen by the following command.<br>
+	    <code>docker image ls</code><br>
+	    Now you can run the docker command. Replace the version with the correct tag. Use only those variables that you set up earlier.
+            <code> docker run -d --rm --name litenai_container -p 8080:8080 -p 8210:8210 -p 8220:8220 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_SERVE_URL=${LITENAI_SERVE_URL} -e LITENAI_LLM_MODEL=${LITENAI_LLM_MODEL} -e LITENAI_AGENTIC_MODE=${LITENAI_AGENTIC_MODE} -e LITENAI_LAKE_URL=${LITENAI_LAKE_URL} litenai/litenai:<version> </code><br>
+	    The container will run after some time. From the browser, you can open this location and start using the code. For login use, you can use user as 'guest' and password as 'password'<br>
+	    <code>http://localhost:8210</code><br>
+	    See below for some directions on how to use the tool. 
+	  </p>
+	</ul>
+      </p>
+    </div>
+
+
+    <!-- Footer Start -->
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-gray">&copy; 2024 LitenAI</p>
+      </footer>
+    </div>
+    <!-- Footer End -->
+  </body>
+</html>
