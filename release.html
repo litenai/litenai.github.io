@@ -17,123 +17,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link href="css/liten-fluid.css" rel="stylesheet">
 
-  <script language="javascript">
-    function addFormValidation() {
-      "use strict";
-      /*
-      * Form Validation
-      */
-
-      // Fetch all the forms we want to apply custom validation styles to
-      const forms = document.querySelectorAll(".needs-validation");
-      const result = document.getElementById("result");
-
-      // Loop over them and prevent submission
-      Array.prototype.slice.call(forms).forEach(function (form) {
-        form.addEventListener(
-          "submit",
-          function (event) {
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-
-              form.querySelectorAll(":invalid")[0].focus();
-            } else {
-              /*
-              * Form Submission using fetch()
-              */
-
-              const formData = new FormData(form);
-              event.preventDefault();
-              event.stopPropagation();
-              const object = {};
-              formData.forEach((value, key) => {
-                object[key] = value;
-              });
-              const json = JSON.stringify(object);
-              result.innerHTML = "Please wait...";
-
-              fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                  Accept: "application/json"
-                },
-                body: json
-              })
-                .then(async (response) => {
-                  let json = await response.json();
-                  if (response.status == 200) {
-                    result.innerHTML = json.message;
-                    result.classList.remove("text-gray-500");
-                    result.classList.add("text-green-500");
-                  } else {
-                    console.log(response);
-                    result.innerHTML = json.message;
-                    result.classList.remove("text-gray-500");
-                    result.classList.add("text-red-500");
-                  }
-                })
-                .catch((error) => {
-                  console.log(error);
-                  result.innerHTML = "Something went wrong!";
-                })
-                .then(function () {
-                  form.reset();
-                  form.classList.remove("was-validated");
-                  setTimeout(() => {
-                    result.style.display = "none";
-                  }, 5000);
-                });
-            }
-            form.classList.add("was-validated");
-          },
-          false
-        );
-      });
-    }
-    window.onload = addFormValidation;
-  </script>
-
 </head>
 
 <body>
     <!-- Header Start -->
     <div class="navbar1">
-      <div id="menuToggle">
-        <!--
-        A fake / hidden checkbox is used as click reciever,
-        so you can use the :checked selector on it.
-        -->
-        <input id="menu-chkbox" type="checkbox" />
-
-        <!--
-        Some spans to act as a hamburger.
-
-        They are acting like a real hamburger,
-        not that McDonalds stuff.
-        -->
-        <span></span>
-        <span></span>
-        <span></span>
-
-        <!--
-        Too bad the menu has to be inside of the button
-        but hey, it's pure CSS magic.
-        -->
-        <ul id="menu">
-          <a href="index.html#home"><li>Home</li></a>
-          <a href="index.html#product"><li>Product</li></a>
-          <a href="index.html#usecases"><li>Use Cases</li></a>
-          <a href="index.html#about"><li>About</li></a>
-        </ul>
-      </div>
-      <ul>
-        <li><a href="index.html#home" class="nav-link px-2 link-white">Home</a></li>
-        <li><a href="index.html#product" class="nav-link px-2 link-white">Product</a></li>
-        <li><a href="index.html#usecases" class="nav-link px-2 link-white">Use Cases</a></li>
-        <li><a href="index.html#about" class="nav-link px-2 link-white">About</a></li>
-      </ul>
       <img src="images/litenai-logo-white.png" alt="logo-white" />
     </div>
     <!-- Header End -->
@@ -143,103 +31,62 @@
       <h3 class="justify-content-center">LITENAI RELEASE NOTES</h3>
       <br/>
       <p class="text-gray">
-        LitenAI is an AI engineer offering technical support and debug. It
-	orchestrates LitenAI agents to observe, reason and visualize petabyte scale
-	of data. Liten accelerated data layer can search through big data using
-	python and SQL. Liten data can ingest all customer knowledge from text, pdf,
-	html or other media files. LitenAI agents provide unique insights from the
-	securely integrated knowledge and structured data.
-	LitenAI engineer left shifts technical support, and reduces response times
-	to critical issues significantly. It is being evaluated by many high tech
-	companies.
+        LitenAI is an AI engineer automating technical support and debug.
       </p>
       <p class="text-gray">
-        Please <a href="release_notes.html#contact-form" class="link-teal">contact us</a> for our docker install to try out 
-        early access program or for any information.</p>
+	It orchestrates LitenAI agents to observe, reason and visualize petabyte scales of data. Liten lake ingests structured data, logs or metrics to enable accelerated search through big data using python and SQL. It also ingests all customer knowledge from text, pdf,	html or other media files. This knowledge base is used by agents to provide unique insight from the securely integrated knowledge and structured data lake. LitenAI engineer left shifts technical support, and reduces response times to critical issues by 100x by removing engineering expertise bottlenecks. It is being evaluated by many companies.
+      </p>
+      <p class="text-gray">
+        Please <a href="mailto:hkverma@litenai.com" class="link-teal">contact us</a> for access to our docker install to try out early access program or for any other information.
+      </p>
+      <br>
+      <h3 class="justify-content-center">DOCKER INSTALL DIRECTIONS</h3>
+      <br/>
+      <p class="text-gray">
+	Please download the docker image from (LitenAI store)[https://drive.google.com/file/d/17kdZ26SC56GEpu-e1QyxxqyuyS8ritas/view?usp=drive_link]. Once downloaded follow the following directions to run and test it locally. All data is local and accessible only to the user. LitenAI does not collect any data from this use.
+      </p>
+      <br>
+      <p class="text-gray">
+	<ul>
+	  <li>
+	    Ensure that docker is installed and daemon running. USER should also be in the docker group. Follow the directions from (docker website)[https://docs.docker.com/engine/install/linux-postinstall]
+	  </li>
+	  <li>
+	    Load the image from the downloaded image.For this do the following as (shown here)[https://docs.docker.com/reference/cli/docker/image/load/]<br>
+	    <code>docker load < litenai.v0.0.78.tar.gz</code><br>
+	  </li>
+	  <li>
+	    To run the docker, you can set the following variables. <br>
+	    Set API key to a valid OpenAI API key if using OpenAI. Set it to the API key if a local install is being used.<br>
+            <code>export LITENAI_API_KEY=<api_key></code>
+	    If being served locally, the url to be used for LLM call and LLM Model being used are needed. LitenAI supports many LLMs. We also have local LLM installation images, we can help with deploying and serving LLMs of interest. Set these only if local LLM serve is being used. An example setting is shown below.<br>
+	    <code>export LITENAI_SERVE_URL="http://localhost:8000/v1"</code><br>
+	    <code>export LITENAI_LLM_MODEL="meta-llama/Llama-3.2-1B-Instruct"</code><br>
+	  </li>
+	  <li>
+	    LitenAI agents can be tuned to customer requirements. By default, the docker file provides a local lake with AI agents tuned for log reasoning. For this mode, you dont need to set these environment variables<br>
+	    However, we also provide an agentic onfiguration with sample lake tuned to assist field technicians providing technical support for medical and industrial device. If you wish to use in this techassist mode, please set these variables.
+	    <code>LITENAI_AGENTIC_MODE='techassist'</code><br>
+	    <code>LITENAI_LAKE_URL='/srv/lake/techassist'</code><br>
+	  </li>
+	  <p class="text=gray">
+	    Find the litenai tag version that you want to run. Tags can be seen by the following command.<br>
+	    <code>docker image ls</code><br>
+	    Now you can run the docker command. Replace the version with the correct tag. Use only those variables that you set up earlier.
+            <code> docker run -d --rm --name litenai_container -p 8080:8080 -p 8210:8210 -p 8220:8220 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_SERVE_URL=${LITENAI_SERVE_URL} -e LITENAI_LLM_MODEL=${LITENAI_LLM_MODEL} -e LITENAI_AGENTIC_MODE=${LITENAI_AGENTIC_MODE} -e LITENAI_LAKE_URL=${LITENAI_LAKE_URL} litenai/litenai:<version> </code><br>
+	    The container will run after some time. From the browser, you can open this location and start using the code. For login use, you can use user as 'guest' and password as 'password'<br>
+	    <code>http://localhost:8210</code><br>
+	    See below for some directions on how to use the tool. 
+	  </p>
+	</ul>
+      </p>
     </div>
 
-    <div id="contact-form" class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900" style="background-color: black;">
-      <div class="container mx-auto">
-        <div class="max-w-xl mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
-          <div class="text-center">
-            <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
-              Contact Us
-            </h1>
-            <p class="text-gray-400 dark:text-gray-400">
-              Fill up the form below to send us a message.
-            </p>
-          </div>
-          <div class="m-7">
-            <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
-              <input type="hidden" name="access_key" value="9a4a0ba4-d97e-441b-a8f4-5f6ad3d8e0b9" />
-              <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-              <input type="checkbox" name="botcheck" id="" style="display: none;" />
-
-              <div class="flex mb-6 space-x-4">
-                <div class="w-full md:w-1/2">
-                  <label for="fname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">First Name</label>
-                  <input type="text" name="name" id="first_name" placeholder="John" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
-                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                    Please provide your first name.
-                  </div>
-                </div>
-                <div class="w-full md:w-1/2">
-                  <label for="lname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Last Name</label>
-                  <input type="text" name="last_name" id="lname" placeholder="Doe" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
-                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                    Please provide your last name.
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex mb-6 space-x-4">
-                <div class="w-full md:w-1/2">
-                  <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
-                  <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
-                  <div class="empty-feedback text-red-400 text-sm mt-1">
-                    Please provide your email address.
-                  </div>
-                </div>
-
-                <div class="w-full md:w-1/2">
-                  <label for="phone" class="block text-sm mb-2 text-gray-600 dark:text-gray-400">Phone Number</label>
-                  <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
-
-                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                    Please provide your phone number.
-                  </div>
-                </div>
-              </div>
-              <div class="mb-6">
-                <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
-
-                <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" required></textarea>
-                <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                  Please enter your message.
-                </div>
-              </div>
-              <div class="mb-6">
-                <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
-                  Send Message
-                </button>
-              </div>
-              <p class="text-base text-center text-gray-400" id="result"></p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- Footer Start -->
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-gray">&copy; 2024 LitenAI</p>
-        <ul class="nav col-md-4 justify-content-center">
-          <li class="nav-item"><a href="index.html#home" class="nav-link px-2 link-gray">Home</a></li>
-          <li class="nav-item"><a href="index.html#product" class="nav-link px-2 link-gray">Product</a></li>
-          <li class="nav-item"><a href="index.html#usecases" class="nav-link px-2 link-gray">Use Cases</a></li>
-          <li class="nav-item"><a href="index.html#about" class="nav-link px-2 link-gray">About</a></li>
-        </ul>
       </footer>
     </div>
     <!-- Footer End -->
