@@ -466,6 +466,11 @@ div.feature-container > div.summary > a > button {
     padding: 0;
 }
 
+.about img {
+    width: 120px;
+    height: auto;
+}
+
 .playground {
     background-color: black;
     width: 90%;
