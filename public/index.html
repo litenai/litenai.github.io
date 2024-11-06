@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+  <!-- Header Start -->
   <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZQSL0BY68"></script>
@@ -14,16 +15,16 @@
     <title>LitenAI</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.4/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.14/tailwind.min.css" rel="stylesheet">
     <link href="css/liten-fluid.css" rel="stylesheet">
   </head>
 
   <script>
     function onload() {
       var menulinks = document.getElementById("menu").children;
-      for (c of menulinks) {
+        for (c of menulinks) {
         c.onclick = function() {
           document.getElementById("menu-chkbox").checked = false;
         };
@@ -32,28 +33,6 @@
   </script>
 
   <body onload="onload()">
-    <!-- Header Start -->
-    <!--
-    <header class="p-3 text-bg-dark sticky">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-          </a>
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#home" class="nav-link px-2 link-white">Home</a></li>
-            <li><a href="#product" class="nav-link px-2 link-white">Product</a></li>
-            <li><a href="#usecases" class="nav-link px-2 link-white">Use Cases</a></li>
-            <li><a href="#about" class="nav-link px-2 link-white">About</a></li>
-            <li><a href="playground.html" class="nav-link px-2 link-white">Try Playground!!</a></li>
-          </ul>
-          <div class="text-end">
-            <img src="images/litenai-logo-white.png" alt="logo-white" />
-          </div>
-        </div>
-      </div>
-    </header>
-    -->
     <div class="navbar1">
       <div id="menuToggle">
         <!--
@@ -64,9 +43,6 @@
 
         <!--
         Some spans to act as a hamburger.
-
-        They are acting like a real hamburger,
-        not that McDonalds stuff.
         -->
         <span></span>
         <span></span>
@@ -79,17 +55,19 @@
         <ul id="menu">
           <a href="index.html#home"><li>Home</li></a>
           <a href="index.html#product"><li>Product</li></a>
-          <a href="index.html#usecases"><li>Use Cases</li></a>
-          <a href="index.html#about"><li>About</li></a>
-          <a href="playground.html"><li>Try playground!</li></a>
+          <a href="solutions.html"><li>Solutions</li></a>
+          <a href="blogs.html"><li>Blogs</li></a>
+          <a href="index.html#about"><li>Contact</li></a>
+          <a href="earlyaccess.html"><li>Try It Now</li></a>
         </ul>
       </div>
       <ul>
         <li><a href="index.html#home" class="nav-link px-2 link-white">Home</a></li>
         <li><a href="index.html#product" class="nav-link px-2 link-white">Product</a></li>
-        <li><a href="index.html#usecases" class="nav-link px-2 link-white">Use Cases</a></li>
-        <li><a href="index.html#about" class="nav-link px-2 link-white">About</a></li>
-        <li><a href="playground.html" class="nav-link px-2 link-white">Try Playground!!</a></li>
+        <li><a href="solutions.html" class="nav-link px-2 link-white">Solutions</a></li>
+        <li><a href="blogs.html" class="nav-link px-2 link-white">Blogs</a></li>
+        <li><a href="index.html#about" class="nav-link px-2 link-white">Contact</a></li>
+        <li><a href="earlyaccess.html" class="nav-link px-2 link-white">Try It Now</a></li>
       </ul>
       <img src="images/litenai-logo-white.png" alt="logo-white" />
     </div>
@@ -98,20 +76,22 @@
     <div id="home" class="marker">&nbsp;</div>
 
     <!-- Introduction Start -->
-   <div class="intro">
+    <div class="intro">
       <img src="images/ai-bg.jpg" alt="Title" />
       <div class="small-box">
-
         <p class="h1 text-white text-center">
-          Are you tired of reasoning through mountains of data with slow queries?
+          AI Engineer for technical support and debug
         <p>
-        <br>
+          <br>
         <p class="text-gray">
-          LitenAI is a Big Data Copilot to observe, reason and act on large amount
-          of data using a natural chat interface. It has developed expert AI & accelerated
-          data agents with workflows to reason and visualize large amount of data. It uses
-          Generative AI to do today's engineering tasks using natural chat interface. It
-          accelerates big data query for an interactive data chat experience.
+          Are you struggling with slow queries while navigating massive data sets? LitenAI
+          agents offer a powerful solution by automating the observation, reasoning,
+          and visualization of petabyte-scale data. The Liten data lake ingests structured
+          data, logs, and metrics, enabling rapid big data searches.
+          It imports domain documents from various formats, including text, PDFs,
+          HTML, and media files, creating a comprehensive knowledge base. This resource
+          allows LitenAI agents to generate unique insights by combining structured
+          data with securely integrated knowledge expertise.
         </p>
       </div>
     </div>
@@ -128,18 +108,29 @@
         <div class="description">
           <br/>
           <p>
-            LitenAI is a Silicon Valley startup championing a cutting-edge multi-agent platform designed
-            to observe, reason, and act upon data. Its founders possess extensive expertise in AI
-            and data applications and have a proven track record of accelerating platform development
-            for superior performance. They bring valuable experience in optimizing Apache SparkTM
-            performance for large-scale distributed analytics.
+            LitenAI is a Silicon Valley startup championing a cutting-edge multi-agent
+            platform designed to observe, reason, and act upon data. Its founders possess
+            extensive expertise in AI and data applications and have a proven track record
+            of accelerating platform development for superior performance. They bring
+            valuable experience in optimizing Apache Spark performance for large-scale
+            distributed analytics.
           </p>
           <br/>
           <p class="title">CORE FEATURES</p>
           <ul>
             <li>
-              LitenAI platform enables 100x efficiency by automating engineering work using AI and
-              providing a conversational interface to data on the public cloud or on-premise.
+              LitenAI platform enables 100x efficiency by automating engineering support
+              and debug using natural language interface on the public cloud or
+              on-premise.
+            </li>
+            <br/>
+            <li>
+              LitenAI agents are domain trained with customer specific actions and tools.
+            </li>
+            <br/>
+            <li>
+              LitenAI data lake integrates unstructured knowledge from customer documents with
+              structured logs and data for an accelerated petabyte scale storage.
             </li>
             <br/>
             <li>
@@ -148,424 +139,80 @@
             </li>
             <br/>
             <li>
-              Its cloud engineering domain GenAI platforms are pre-trained, use best in class data and AI tools.
-              As customers use the tool, it learns to become smarter.
+              Its cloud engineering domain GenAI platforms are domain trained, use best
+              in class data and AI tools. As customers use the tool, it learns to become
+              more efficient.
             </li>
           </ul>
           <br/>
-          <p class="title">USER INTERFACES</p>
-          <ul>
-            <li>
-              LitenAI standalone chat acts as a smart data copilot. Users can observe data
-              by asking query questions. They can also reason it out using natural
-              languages.
-            </li>
-            <br/>
-            <li>
-              LitenAI can be installed using pip in Jupyter notebook. You could use a
-              single send call to do all your reasoning. LitenAI copilot orchestrates the
-              actions using a master agent to an appropriate data or AI agent.
-            </li>
-            <br/>
-            <li>
-              Liten is available as a chat bot for Slack. You can add Liten as a bot
-              in your Slack, and chat to it to get answers for your data.
-            </li>
-          </ul>
         </div>
+      </div>
+
+      <div id="product" class="marker">&nbsp;</div>      
+      <div class="product-container bg-black text-white">        
+      <p class="h5 text-center">USER INTERFACES</p>
+      <br/>
+      <div class="product">
+        <img src="images/litenai-agentic-platform.png" alt="Agentic architecture" />
+        <div class="description">
+          <br/>
+          <p>
+            LitenAI is designed to be used in customer's existing toolsets. It can
+            connect to customer data sources and knowledge base, and provide efficiencies
+            without major changes.
+          </p>
+          <br/>        
+        <p class="title">USER INTERFACES</p>
+        <ul>
+          <li>
+            LitenAI standalone chat acts as an AI engineer for tecnhical support and
+            debug.
+          </li>
+          <br/>
+          <li>
+            LitenAI can be installed in Jupyter notebook as a python library.
+          </li>
+          <br/>
+          <li>
+            Liten is available as a chat bot for Slack. You can add Liten as a bot
+            in your Slack, and chat to it to get answers for your data.
+          </li>
+        </ul>
+      </div>
       </div>
     </div>
     <!-- Product End -->
 
     <hr/>
 
-    <div id="usecases" class="marker">&nbsp;</div>
-
-    <!-- Use Cases Start -->
-
-    <!--<div class="container-fluid p-5 my-5 bg-black text-white">-->
-    <div class="use-cases bg-black text-white">
-      <p class="h5 text-center">USE CASES</p>
-      <div class="feature-container">
-        <p class="h6">BIG DATA REASONING</p>
-        <p class="text-gray">
-          Modern enterprises are at a cross roads with the advent of Generative AI.
-          LitenAI's mission is to help enterprises tap into the vast data and knowledge within these companies.
-          For that mission, it has developed a big data copilot with integrated Gen AI agents and big data base
-          clusters to enable much faster response times.
-        </p>
-        <div class="features">
-          <div>
-            <div class="header">
-              <img src="images/turbocharge.png" alt="turbocharge" />
-              <p class="h7">TURBOCHARGE PRODUCTIVITY</p>
-            </div>
-            <p class="text-gray">
-              At one of our client sites, training new engineers necessitated the presence of experienced ones.
-              LitenAI optimized this process by leveraging existing playbooks and cloud server datasets to refine
-              the models. Additionally, it incorporated customer-specific prompt engineering to elicit expert,
-              human-like responses from the Liten platform.
-            </p>
-            <p class="text-gray">
-              A newly onboarded engineer could inquire about debugging status code errors, various log files, or
-              inquire about the most significant issues from the past month and receive expert, human-like responses.
-            </p>
-          </div>
-          <div>
-            <div class="header">
-              <img src="images/natural-language.png" alt="natural-language" />
-              <p class="h7">NATURAL LANGUAGE BASED REASONING</p>
-            </div>
-            <p class="text-gray">
-              Customers often feel hesitant about learning a new query language. The Liten
-              platform addresses this concern by offering a natural language interface for
-              query specification. Its code AI agent translates these specifications into SQL
-              queries, enabling customers to use them seamlessly. Moreover, the platform
-              integrates sophisticated visualization tools, empowering users to create and
-              visualize cloud-based dashboards effortlessly. All these functionalities are
-              orchestrated through a master agent, accessible via a unified natural language
-              interface.
-            </p>
-            <p class="text-gray">
-              Liten's models serve as invaluable aids to all cloud engineers—CIOs, SREs,
-              DevOps engineers, and more—acting as co-pilots to significantly enhance
-              productivity.
-            </p>
-          </div>
-          <div>
-            <div class="header">
-              <img src="images/event-publish.png" alt="event-publish" />
-              <p class="h7">STREAMLINED EVENT PUBLISHING</p>
-            </div>
-            <p class="text-gray">
-              In one of our customers, many alerts are being issued for the same event.
-              Liten can streamline the flow. For this, it stores the alerts. Using its models,
-              it can detect similar events and produce consolidated messages in Slack bots.
-              The flow looks like this
-              <ul class="text-gray">
-                <li>
-                  Multiple alerts generated for one event.
-                </li>
-                <li>
-                  Liten consolidates alerts into its event group.
-                </li>
-                <li>
-                  Consolidates it into Slack channels and conversations.
-                </li>
-                <li>
-                  LitenBot in Slack answers questions about all the events.
-                  It uses finetuned agents for targeted answers.
-                </li>
-              </ul>
-            </p>
-          </div>
-        </div>
-        <div class="sample-container container-bg-teal">
-          <p class="h7">SAMPLE USER REASONING SESSIONS</p>
-          <p class="text-lightgray description">
-            LitenAI possesses the capability to comprehend diverse log file formats. Its
-            adaptable data model allows for seamless extensions, facilitating the comprehension
-            of customer-specific data. The finely-tuned models within LitenAI are adept at
-            understanding domain-specific knowledge. Moreover, LitenAI can fine-tune models
-            using customer data exclusively for their specific use cases.
-          </p>
-          <div class="use-case">
-            <p class="h7 title-small">SERVER LOG REASONING</p>
-            <img class="img-fluid" src="images/server-error-plot-chat.png" alt="Server Error Plot Chat">
-            <div>
-              <p class="h7 title-large">SERVER LOG REASONING</p>
-              <p class="text-lightgray description">
-                LitenAI models are finely tuned to execute server log reasoning with an
-                expertise akin to an expert. Here are several examples showcasing the range of
-                analysis it can perform.
-              </p>
-              <p class="h6">Internal server error analysis</p>
-              <p class="text-lightgray description">
-                Users have the ability to upload their data for analysis through LitenAI's platform.
-                Additionally, LitenAI manages SQL tables and ingests data into these tables. This
-                enables customers to execute queries, create visualizations, and deduce insights
-                from the data. Moreover, LitenAI conducts advanced analysis and coordinates both data
-                and AI agents to fulfill various tasks for the users.
-              </p>
-            </div>
-          </div>
-          <div class="use-case">
-            <img class="img-fluid" src="images/internal-server-error-log-chat.png" alt="Internal Server Error">
-            <div>
-              <p class="text-lightgray description">
-                LitenAI is capable of analyzing data and offering error analysis as part of its
-                functionalities.
-              </p>
-              <p class="text-lightgray description">Customers performed various tasks using chat interfaces like</p>
-              <ul class="text-lightgray description">
-                <li>
-                  Enquire about the count of 200, 300, 400, and 500 status codes observed by
-                  the service in the past hour. Also, seek this information for a specific time
-                  range between time x and time y, using aggregated time based queries.
-                </li>
-                <li>
-                  Determine which day of the week typically experiences the highest traffic.
-                </li>
-                <li>
-                  Identify the time of day when traffic is at its peak.
-                </li>
-                <li>
-                  Request information about the increase or decrease in traffic volume over
-                  the past 12 months.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <br/><br/>
-          <div class="use-case">
-            <p class="h7 title-small">LINUX LOG EXPERT ANALYSIS</p>
-            <img class="img-fluid" src="images/syslog-error-chat.png" alt="Syslog Error Chat">
-            <div>
-              <p class="h7 title-large">LINUX LOG EXPERT ANALYSIS</p>
-              <p class="text-lightgray description">
-                The Linux operating system generates diverse log files including system logs,
-                application logs, and event logs. LitenAI comprehends these log files and has the
-                capability to analyze failures, offering potential solutions accompanied by code.
-              </p>
-              <p class="h6">Analysis of syslog error</p>
-              <p class="text-lightgray description">
-                Interpreting Linux system logs can be challenging. Liten stores these logs and
-                conducts comprehensive analyses to derive valuable insights. Refer to the following
-                chat for an example of the analysis.
-              </p>
-              <p class="text-lightgray description">
-                Users have the ability to inquire about different aspects of Linux log data, such as
-              <p>
-              <ul class="text-lightgray description">
-                <li>
-                  Crafting a script to parse syslog data and flag RAM as corrupted if more
-                  than 10 errors occur within a 24-hour period.
-                </li>
-                <li>
-                  Determining the frequency of RAM-related CRC errors across all syslogs.
-                </li>
-              </div>
-            </div>
-          </div>
-          <div class="summary">
-            LitenAI streamlines the analysis of extensive datasets through innovative AI
-            and accelerated data agents, simplifying complex reasoning tasks. It unlocks
-            pioneering solutions by harnessing next-generation tools.<br/>
-            <a href="playground.html">
-              <button>TRY IT TODAY!</button>
-            </a>
-          </div>
-        </div>
-
-        <div class="feature-container">
-          <p class="h6">ACCELERATED BIG DATA OBSERVATION</p>
-          <p class="text-gray">
-            Modern enterprises are experiencing an unprecedented surge in data creation, where vast
-            amounts of information are generated constantly. This expansion coincides with significant
-            advances in cloud technology, marked by disaggregated systems. While there are significant
-            and continuous hardware advancements, the organizations struggle to meet the ever increasing
-            demands for performance improvements, reduction in cycle times and to save on computational
-            and cloud costs. The organizations are also in a race to combat climate change and meet
-            their sustainability targets.
-          </p>
-          <p class="text-gray">
-            Employing a unique tensor representation, the data agents within LitenAI can accelerate
-            the queries by a huge multiplication factor of 50-100x thus helping the organizations
-            achieve the twin goals of performance with sustainable computing while also saving
-            costs in a competitive environment.
-          </p>
-
-          <div class="use-case data-agent">
-            <img class="img-fluid" src="images/litenai-data-agent.png" alt="Accelerated Data Agent" />
-            <div>
-
-              <p class="h7">ACCELERATING DATA AGENT BY 100x</p>
-              <p class="text-gray">
-                Current relational and tabular data platforms lack adaptation to leverage emerging technologies.
-                Employing a unique tensor representation, the data agents within LitenAI accelerate queries by a factor
-                of 100. They transform incoming data into a tensor-formatted columnar structure, optimizing processor
-                and accelerated solutions to enhance the speed of existing queries. LitenAI seamlessly integrates into
-                Spark clusters and can efficiently ingest data from various data warehouses.
-              </p>
-              <p class="text-gray">
-                LitenAI seamlessly operates within existing or new SparkTM clusters as a service. Once activated, it utilizes
-                jar files in Spark tasks to perform accelerated functions through LitenAI. Jobs executed by customers maintain
-                their settings but experience enhanced performance. LitenAI accelerates various tasks such as filters and joins,
-                typically found in commonly used SQL query plans. Additionally, LitenAI can construct customized accelerated UDFs
-                (User Defined Functions) tailored to individual customer requirements. These UDFs can be applied within queries
-                or used as standalone functions, offering valuable solutions for specific customer use cases.
-              </p>
-            </div>
-          </div>
-          <div class="example-container">
-            <div class="example">
-              One of our clients hosts extensive network traffic data in the cloud, reaching volumes that can span into petabytes
-              becoming cost prohibitive. LitenAI offers a big data solution capable of storing limitless log data. It employs
-              industry-standard open data lake format delta-lake for data storage. Specifically, in this scenario, data is stored
-              in partitions categorized by traffic timestamps.
-            </div>
-            <div class="example">
-              To address company needs and inquiries, they regularly query these files to detect policy violations. However, this
-              process became notably slow, hindering their ability to meet service level requirements. To tackle this, LitenAI
-              incorporates an acceleration layer by storing data in a tensor-formatted file. This diminishes the necessity for
-              cross-referencing and joining with additional data dimensions. As a result, Liten expedited the customer's query,
-              delivering the sought-after policy answers promptly.
-            </div>
-          </div>
-
-          <div class="sample-container container-bg-teal">
-            <p class="h7">BENCHMARK TPCH QUERY</p>
-            <p class="text-lightgray description">
-              The Transaction Processing Performance Council (TPC) sets industry-standard benchmarks for data and query performance.
-              TPC BenchmarkTM H is a decision support benchmark. Benchmark tests are conducted for Query 5 and Query 6 of TPCH because
-              they have complex joins and result in longer query plans. These tests involved utilizing both a standalone Spark cluster
-              and a separate Liten service. Liten enhanced query performance through a tensor-based engine and preserved an in-memory
-              cache of tensors to eliminate redundant creation processes.
-            </p>
-            <div class="use-case">
-              <p class="h7 title-small">TPCH Query 5</p>
-              <img class="img-fluid" src="images/tpch-query5.png" alt="TPCH Query 5" />
-              <div>
-                <p class="h7 title-large">TPCH Query 5</p>
-                <p class="text-lightgray description">
-                  This query compiles the revenue generated from local suppliers.
-                </p>
-                <p class="text-lightgray description">
-                  LitenAI expedites this process by eliminating the necessity for joins. Instead, tensor data replaces joins
-                  with more straightforward multi-dimensional lookups. This streamlines operations by minimizing shuffle
-                  operations, resulting in a significant acceleration of the query.
-                </p>
-              </div>
-            </div>
-            <div class="use-case">
-              <p class="h7 title-small">TPCH Query 6</p>
-              <img class="img-fluid" src="images/tpch-query6.png" alt="TPCH Query 6" />
-              <div>
-                <p class="h7 title-large">TPCH Query 6</p>
-                <p class="text-lightgray description">
-                  This query assesses the potential revenue growth achievable by removing company-wide discounts.
-                </p>
-                <p class="text-lightgray description">
-                  With LitenAI, the query plan is simplified along with accelerated scan/aggregates. On a standard
-                  Azure DS2 VM, Spark 3.2 required 16 seconds to execute, whereas Liten completed the task in a mere
-                  0.06 seconds, delivering over a 100x performance improvement.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="summary">
-            LitenAI solutions enhance Spark performance for large-scale distributed analytics. They can be utilized either
-            as a standalone service or added to an existing customer cluster as an additional service.<br/>
-            <a href="playground.html">
-              <button>TRY IT TODAY!</button>
-            </a>
-          </div>
-      </div>
-    </div>
-    <!-- Use Cases End -->
-
     <div id="about" class="marker">&nbsp;</div>
 
-    <!-- About Start -->
-    <div class="bg-white text-dark about">
-      <p class="h3 text-center">ABOUT</p>
+    <!-- Contact Start -->
+    <div class="bg-black text-white about">
+      <p class="h3 text-center">Contact</p>
       <div class="about-description">
         <img src="images/litenai-logo.png" alt="Liten">
-        <p>
-          LitenAI, a Silicon Valley startup, champions a cutting-edge multi-agent platform designed
-          to observe, reason, and act upon data. Its founders possess extensive expertise in AI
-          and data applications and have a proven track record of accelerating platform development
-          for superior performance. They bring valuable experience in optimizing Apache SparkTM
-          performance for large-scale distributed analytics.
-        </p>
-      </div>
-    <div id="contact-form" class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900" style="background-color: black;">
-      <div class="container mx-auto">
-        <div class="max-w-xl mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
-          <div class="text-center">
-            <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
-              Contact Us
-            </h1>
-            <p class="text-gray-400 dark:text-gray-400">
-              Fill up the form below to send us a message.
-            </p>
-          </div>
-          <div class="m-7">
-            <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
-              <input type="hidden" name="access_key" value="9a4a0ba4-d97e-441b-a8f4-5f6ad3d8e0b9" />
-              <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-              <input type="checkbox" name="botcheck" id="" style="display: none;" />
-
-              <div class="flex mb-6 space-x-4">
-                <div class="w-full md:w-1/2">
-                  <label for="fname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">First Name</label>
-                  <input type="text" name="name" id="first_name" placeholder="John" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
-                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                    Please provide your first name.
-                  </div>
-                </div>
-                <div class="w-full md:w-1/2">
-                  <label for="lname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Last Name</label>
-                  <input type="text" name="last_name" id="lname" placeholder="Doe" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
-                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                    Please provide your last name.
-                  </div>
-                </div>
-              </div>
-
-              <div class="flex mb-6 space-x-4">
-                <div class="w-full md:w-1/2">
-                  <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
-                  <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
-                  <div class="empty-feedback text-red-400 text-sm mt-1">
-                    Please provide your email address.
-                  </div>
-                </div>
-
-                <div class="w-full md:w-1/2">
-                  <label for="phone" class="block text-sm mb-2 text-gray-600 dark:text-gray-400">Phone Number</label>
-                  <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
-
-                  <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                    Please provide your phone number.
-                  </div>
-                </div>
-              </div>
-              <div class="mb-6">
-                <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
-
-                <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" required></textarea>
-                <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-                  Please enter your message.
-                </div>
-              </div>
-              <div class="mb-6">
-                <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
-                  Send Message
-                </button>
-              </div>
-              <p class="text-base text-center text-gray-400" id="result"></p>
-            </form>
-          </div>
-        </div>
+        <p>LitenAI, a Silicon Valley startup, is building an AI engineer to automate technical support and debug.</p>
+        <p>Please send any enquiry or request product access <a href="https://forms.gle/wTTXiiNCLHyZ9BBo6"> by clicking here to fill a short request.</a> You can also <a href="mailto:hkverma@litenai.com" class="link-teal">email us</a> for any enquiry.</p>
       </div>
     </div>
-      
-    <!-- About End -->
+    <!-- Contact End -->
 
     <!-- Footer Start -->
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
         <p class="col-md-4 mb-0 text-gray">&copy; 2024 LitenAI</p>
         <ul class="nav col-md-5 justify-content-center">
-          <li class="nav-item"><a href="#home" class="nav-link px-2 link-gray">Home</a></li>
-          <li class="nav-item"><a href="#product" class="nav-link px-2 link-gray">Product</a></li>
-          <li class="nav-item"><a href="#usecases" class="nav-link px-2 link-gray">Use Cases</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link px-2 link-gray">About</a></li>
-          <li class="nav-item"><a href="playground.html" class="nav-link px-2 link-gray">Playground</a></li>
+          <li class="nav-item"><a href="index.html#home" class="nav-link px-2 link-gray">Home</a></li>
+          <li class="nav-item"><a href="index.html#product" class="nav-link px-2 link-gray">Product</a></li>
+          <li class="nav-item"><a href="solutions.html" class="nav-link px-2 link-gray">Solutions</a></li>
+          <li class="nav-item"><a href="blogs.html" class="nav-link px-2 link-gray">Blogs</a></li>
+          <li class="nav-item"><a href="index.html#about" class="nav-link px-2 link-gray">Contact</a></li>
+          <li class="nav-item"><a href="earlyaccess.html" class="nav-link px-2 link-gray">Try It Now</a></li>
         </ul>
       </footer>
     </div>
     <!-- Footer End -->
+    
   </body>
 </html>
