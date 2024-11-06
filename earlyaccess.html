@@ -182,7 +182,7 @@
       </div>
 
       <div class="feature-container">
-        <p class="h6 text-center">APPLICATION LOG REASONING CHAT SESSION</p>
+        <p class="h6 text-center">APPLICATION LOG REASONING SESSION</p>
         <p class="text-gray">
           You can follow the following chat script to understand the agents and lake.
           The lake contains ingested documents as well as tables. Prompts are shown in
@@ -216,6 +216,58 @@
             Ask for resolution.<br>
             <li><i>Looks like 500 is the real problem. Suggest some resolutions for this.</li>
             You can ask for more plans and drill down further as needed.</i><br>
+          </ul>
+        </p>
+      </div>
+
+      <div class="feature-container">
+        <p class="h6 text-center">MEDICAL EQUIPMENT MAINTENANCE SESSION</p>
+        <p class="text-gray">
+          You can follow the following chat script to understand the agents and lake.
+          In this chat, a technician is trying to do a preventive maintenance on
+          a Baxter medical pump.
+          <ul>
+            <li><i>I need help with Baxter infusion pump preventive maintenance</i></li>
+            <li><i>Assist me by naming all possible preventive maintenance for Baxter
+              SIGMA Spectrum Infusion Pump. Do not provide details.</i></li>
+            <li><i>Query the servicerecord to show me the PM needed for this pump.</i></li>
+            <br> LitenAI looks into service History and outputs the PMs due right now.
+            Pump Operation Test is due right now.
+            <li><i>Show me the last 3 PMs done on this pump for last 12 months.</i></li>
+            LitenAI looks into service History and outputs the list of PMs and Dates
+            completed.
+            <li><i>Provide me exact names of test that are part of Pumps Operation Test.
+              Don't include any details on the steps.
+            </i></li>
+            <li><i>Show me the exact setup steps for Pump Operations Test.
+              Do not provide details.
+            </i></li>
+            Chatbot answers from summary in the manual including the setup this image.
+            <li><i>
+              From Baxter test manual show me the Test Setup Image for Pump Operation Test.
+            </i></li>
+            <li><i>
+              Show me the exact initial steps for Flow Rate Accuracy Test without any
+              details.
+            </i></li>
+            LitenAI answers from summary in the manual including the setup this image.
+            <li><i>
+              Show me exact steps for Volumetric Test for Baxter SIGMA Pump without any
+              details. Show the image of test also.
+            </i></li>
+            <li><i>Show me the image for this test</i></li>
+            <li><i>
+              Provide me exact steps for Battery Capacity Test without any details
+            </i></li>
+            <li><i>
+              Assist me with the Preventive Maintenance Check Sheet for Pump Operation Test.
+            </i></li>
+            <li><i>
+              Assist me to generate the completed/filled Flow Rate Accuracy Test Report
+            </i></li>
+            <li><i>
+              Please generate the completed/filled Battery Capacity Test Report
+            </i></li>
           </ul>
         </p>
       </div>
