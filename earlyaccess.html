@@ -113,9 +113,9 @@
       <div class="feature-container">
         <p class="h6 text-center">DOCKER INSTALL DIRECTIONS</p>
         <p class="text-white text-center">
-          Please download the docker image from
-          <a href="https://drive.google.com/file/d/17kdZ26SC56GEpu-e1QyxxqyuyS8ritas/view?usp=drive_link">LitenAI store</a>.
-          Once downloaded follow the following directions to run it locally.
+          <br><a href="index.html#about" class="link-teal">Contact us</a> to get the
+          latest docker image.
+          <br>Once downloaded follow the following directions to run it locally.
           All data is local and accessible only to the user. LitenAI does not
           collect any data from user.
         </p>
@@ -151,38 +151,43 @@
           Set API key to a valid OpenAI API key if using OpenAI. Set it to the API
           key if a local install is being used. It should be OpenAI API compatible.
           <br><code>export LITENAI_API_KEY="api_key"</code>
-          <br>If being served locally, the url to be used for LLM call and LLM Model being
-          used are needed. LitenAI supports many LLMs. We also have local LLM installation
-          images, we can help with deploying and serving LLMs of interest. Set these only
-          if local LLM serve is being used. An example setting is shown below.
-          <br><code>export LITENAI_SERVE_URL="http://localhost:8000/v1"</code>
-          <br><code>export LITENAI_LLM_MODEL="meta-llama/Llama-3.2-1B-Instruct"</code>
+          <br>Now you can run the docker command for log reasoning.
+          Replace the version with the correct tag.
+          <br><code> docker run -d --rm --name litenai_container -p 8080:8080 -p 8210:8210 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} litenai/litenai:0.0.81 </code>
+          <br>It takes a few minutes for LitenAI service to start. See below for some
+          sample log reason chats. In the chatbot, in the side panel, you would also
+          see saved chats.
+          You can double click on them to load and see. You can chat with LitenAI as you
+          would with a support and debug engineer.
+          From the browser, you can open this location and start using the LitenAI.
+          localhost may need to replaced with the url location needed for your machine.
+          <br><code>http://localhost:8210</code>
+          <br>It will ask for login credentials.
+          Please <a href="index.html#about" class="link-teal"> contact us </a>
+          to get the login credentials.
 
           <br>LitenAI agents can be tuned to customer requirements. By default, the docker
-          file provides a local lake with AI agents tuned for applicaiton log reasoning.
+          file provides a local lake with AI agents tuned for application log reasoning.
           For log reasoning you dont need to set these variables.
           However, if you wish to try out the mode for debug assistance for field equipments
           such as medical devices, LitenAI provides an agentic onfiguration with sample
           lake tuned to assist field technicians providing technical support for medical
-          and industrial device. If you wish to use in this techassist mode.
-          Please set these variables to enable this mode.
-          <br><code>LITENAI_AGENTIC_MODE='techassist'</code>
-          <br><code>LITENAI_LAKE_URL='/srv/lake/techassist'</code>
+          and industrial device. If you wish to use in this techassist mode,
+          please use the following docker run command.
+          <br><code>docker run -d --rm --name liten_container -p 8080:8080 -p 8210:8210 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_AGENTIC_MODE="techassist" -e LITENAI_LAKE_URL="/srv/lake/techassist" litenai/litenai:0.0.81</code>
           <br>These agentic modes are data driven configurations and can be tuned to customer
           specifications.
-          <br>Now you can run the docker command. Replace the version with the correct tag.
-          Use only those variables that you set up for the agentic mode that you are trying
-          out.
-          <br><code> docker run -d --rm --name litenai_container -p 8080:8080 -p 8210:8210 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_SERVE_URL=${LITENAI_SERVE_URL} -e LITENAI_LLM_MODEL=${LITENAI_LLM_MODEL} -e LITENAI_AGENTIC_MODE=${LITENAI_AGENTIC_MODE} -e LITENAI_LAKE_URL=${LITENAI_LAKE_URL} litenai/litenai:version </code>
-          <br>It takes a few minutes for LitenAI service to start. Please see below for some
-          sample chats. In the chatbot, in the side panel, you would also see saved chats.
-          You can double click on them to load and see. You can chat with LitenAI as you
-          would with a support and debug engineer.
-          From the browser, you can open this location and start using the LitenAI. localhost may need to replaced with the url location needed for your machine.
-          <br><code>http://localhost:8210</code>
-          <br>It will ask for login credentials.
-          Please <a href="index.html#about" class="link-teal"> contact us </a>
-          to get the login credentials.<br>
+          
+          <br>LitenAI can also use locally served LLMs. We also provide pre-built
+          images to serve in customer networks. We can help with deploying and serving
+          LLMs of interest. If being served locally, the url to be used for LLM call and
+          LLM Model being used are needed. LitenAI uses an OpenAI API calls for all LLMs.
+          An example setting is shown below.
+          <br><code>export LITENAI_SERVE_URL="http://localhost:8000/v1"</code>
+          <br><code>export LITENAI_LLM_MODEL="meta-llama/Llama-3.2-1B-Instruct"</code>
+          <br>This is the docker run command. You can use docker environment variables to
+          use the correct run modes.
+          <br><code>docker run -d --rm --name liten_container -p 8080:8080 -p 8210:8210 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_SERVE_URL=${LITENAI_SERVE_URL} -e LITENAI_LLM_MODEL=${LITENAI_LLM_MODEL} -e LITENAI_AGENTIC_MODE=${LITENAI_AGENTIC_MODE} -e LITENAI_LAKE_URL=${LITENAI_LAKE_URL} litenai/litenai:0.0.81</code>
         </p>
       </div>
 
