@@ -87,61 +87,66 @@
           LitenAI is an AI engineer automating technical support and debug.
         </p>
         <p class="text-white text-center">
-          LitenAI is a chatbot that orchestrates customized AI agents based on user
-          prompt to observe, reason and visualize petabyte
-          scales of data. Liten lake ingests structured data, logs or metrics and enables
-          accelerated search through big data. It ingests customer knowledge base
-          from text, pdf, html or other media files. This knowledge base is used by
-          agents to provide unique insight from the securely integrated knowledge and
-          structured data lake. LitenAI left shifts technical support,and reduces
-          response times to critical issues by 100x by removing engineering expertise
-          bottlenecks.
+          LitenAI platform orchestrates customized AI agents based on user
+          prompt to observe, reason and visualize data at petabyte scale.
+          Through its data layer, it can connect to external sources or
+          ingest structured data, logs, and metrics. It also integrates
+          customer knowledge bases from text, PDFs, HTML, and other media
+          formats, using this information to deliver in-depth, contextually
+          relevant insights drawn from both the data lake and securely
+          integrated knowledge sources. By shifting technical support
+          to an AI-first model, LitenAI reduces response times to critical
+          issues by up to 100x, effectively bypassing traditional
+          engineering bottlenecks.
+
         </p>
         <p class="text-white text-center">
-          It is avaiable for early access now. You can access it on public clouds with
-          prepopulated agentic flow and lake. You can evaluate it by uploading your
-          data there. It is also available as a docker image to try it out on your
-          machine under your secure data networks.
-          Please <a href="index.html#about" class="link-teal"> contact us </a>
-          to try out early access program or for any other information.
+          Now available in early access, LitenAI can be deployed on public
+          clouds with pre-configured agent workflows and data lakes. Users
+          can evaluate its capabilities by uploading their data, or they
+          can run it as a Docker image within secure data networks. To join
+          the early access program or learn more, please
+          <a href="index.html#about" class="link-teal"> contact us.</a>
         </p>
       </div>
 
       <div class="feature-container">
         <p class="h6 text-center">DOCKER INSTALL DIRECTIONS</p>
-        <p class="text-gray text-center">
+        <p class="text-white text-center">
           Please download the docker image from
           <a href="https://drive.google.com/file/d/17kdZ26SC56GEpu-e1QyxxqyuyS8ritas/view?usp=drive_link">LitenAI store</a>.
           Once downloaded follow the following directions to run it locally.
           All data is local and accessible only to the user. LitenAI does not
-          collect any data from this use.
+          collect any data from user.
         </p>
-        <p class="text-gray text-center">
-        <ul>
-          <li>
-            Ensure that docker is installed and daemon running. USER should also be in
-            the docker group. Follow the directions from
-            <a href="https://docs.docker.com/engine/install/linux-postinstall">docker website</a>
-          </li>
-          <li>
-            Load the image from the downloaded image.For this load the image as shown below.
-            <a href="https://docs.docker.com/reference/cli/docker/image/load">Click here for more details.</a>
-            <br><code>docker load < litenai.v0.0.78.tar.gz</code><br>
-          </li>
-          <li>
-            The image should now be in docker images. This should show LitenAI image and tag.
-            <br><code>docker image ls</code><br>
-            Pick the litenai tag version that you want to run.
-          </li>
-        </ul>
-        LitenAI agents can be used for technical support or debug from application logs or
-        from equipment logs from the field. We show the two use cases below.
+        <p class="text-white text-center">
+          <ul>
+            <li>
+              Ensure that docker is installed and daemon running. USER
+              should also be in the docker group. Follow the directions from
+              <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">docker website.</a>
+            </li>
+            <li>
+              Load the image from the downloaded image.For this load the image as shown below.
+              <a href="https://docs.docker.com/reference/cli/docker/image/load">Click here for more details.</a>
+              <br><code>docker load < litenai.v0.0.81.tar.gz</code><br>
+            </li>
+            <li>
+              The image should now be in docker images. This should show
+              LitenAI image and tag.
+              <br><code>docker image ls</code><br>
+              Pick the litenai tag version that you want to run.
+            </li>
+          </ul>
+          LitenAI agents can be used for technical support or debug from
+          application logs or from equipment logs from the field. We show the
+          two use cases below.
         </p>
       </div>
 
       <div class="feature-container">
         <p class="h6 text-center">STARTING LITENAI SERVICE</p>
-        <p class="text-gray">
+        <p class="text-white">
           To run the docker to analyze application logs set OpenAI API Key variable.
           Set API key to a valid OpenAI API key if using OpenAI. Set it to the API
           key if a local install is being used. It should be OpenAI API compatible.
@@ -168,12 +173,12 @@
           <br>Now you can run the docker command. Replace the version with the correct tag.
           Use only those variables that you set up for the agentic mode that you are trying
           out.
-          <br><code> docker run -d --rm --name litenai_container -p 8080:8080 -p 8210:8210 -p 8220:8220 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_SERVE_URL=${LITENAI_SERVE_URL} -e LITENAI_LLM_MODEL=${LITENAI_LLM_MODEL} -e LITENAI_AGENTIC_MODE=${LITENAI_AGENTIC_MODE} -e LITENAI_LAKE_URL=${LITENAI_LAKE_URL} litenai/litenai:version </code>
+          <br><code> docker run -d --rm --name litenai_container -p 8080:8080 -p 8210:8210 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_SERVE_URL=${LITENAI_SERVE_URL} -e LITENAI_LLM_MODEL=${LITENAI_LLM_MODEL} -e LITENAI_AGENTIC_MODE=${LITENAI_AGENTIC_MODE} -e LITENAI_LAKE_URL=${LITENAI_LAKE_URL} litenai/litenai:version </code>
           <br>It takes a few minutes for LitenAI service to start. Please see below for some
           sample chats. In the chatbot, in the side panel, you would also see saved chats.
           You can double click on them to load and see. You can chat with LitenAI as you
           would with a support and debug engineer.
-          From the browser, you can open this location and start using the LitenAI.
+          From the browser, you can open this location and start using the LitenAI. localhost may need to replaced with the url location needed for your machine.
           <br><code>http://localhost:8210</code>
           <br>It will ask for login credentials.
           Please <a href="index.html#about" class="link-teal"> contact us </a>
@@ -183,161 +188,138 @@
 
       <div class="feature-container">
         <p class="h6 text-center">APPLICATION LOG REASONING SESSION</p>
-        <p class="text-gray">
+        <p class="text-white">
           You can follow the following chat script to understand the agents and lake.
-          The lake contains ingested documents as well as tables. Prompts are shown in
-          italics.
-          <ul>
-            Let us list the tables and understand the table we would be working on.<br>
-            <li><i>List all the tables</i></li>
-            <li><i>Describe imapserverlog and webaccesslog tables</i></li>
-            <li><i>Count the number of rows in imapserverlog and webaccesslog tables.</i></li>
-            Ask for the plan here to debug highest latency values.
-            <li><i>Can you give me a plan to debug high latency value? Latency is measured
-              by timestamp difference from imapserverlog to webaccesslog table. These tables
-              are joined by requestid fields. Keep all the fields of both the tables in the
-              output with names prepended with table abbreviations. Give me the SQL
-              selecting highest 500 latency values.</i></li>
-            Now you can execute the generated SQL.
-            <li><i>execute the generated sql</i></li>
-            Ask for an analysis.<br>
-            <li><i>Can you analyze the possible causes of high latency?</i></li>
-            Drill down for a specific error code.<br>
-            <li><i>I want to focus on status code. Could you modify the sql to select
-              all rows with the status codes indicating error like 404, 500 etc.</i></li>
-            Execute the sql now.<br>
-            <li><i>execute the sql</i></li>
-            You can look at the plot. It gives a data explorer on the output dataset.<br>
-            <li><i>plot the data</i></li>
-            You can also serve the plot on a different tab for better view<br>
-            <li><i>serve the plot</i></li>
-            You can ask for top error<br>
-            <li><i>Can you tell me one top error code for latency degradation? Limit your selection to one error code.</i></li>
-            Ask for resolution.<br>
-            <li><i>Looks like 500 is the real problem. Suggest some resolutions for this.</li>
-            You can ask for more plans and drill down further as needed.</i><br>
-          </ul>
+          The lake contains ingested documents as well as tables. User prompts are underlined in the text below.
+          <br>Let us list the tables and understand the table we would be working on.
+          <br><u>List all the tables.</u>
+          <br><u>Describe imapserverlog and webaccesslog tables.</u>
+          <br><u>Count the number of rows in imapserverlog and webaccesslog tables.</u>
+          <br>Ask for the plan here to debug highest latency values.
+          <br><u>Can you give me a plan to debug high latency value? Latency is measured
+          by timestamp difference from imapserverlog to webaccesslog table. These tables
+          are joined by requestid fields. Keep all the fields of both the tables in the
+          output with names prepended with table abbreviations. Give me the SQL
+          selecting highest 500 latency values.</u>
+          <br>Now you can execute the generated SQL.
+          <br><u>execute the generated sql</u>
+          <br>Ask for an analysis.
+          <br><u>Can you analyze the possible causes of high latency?</u>
+          <br>Drill down for a specific error code.
+          <br><u>I want to focus on status code. Could you modify the sql to select
+          all rows with the status codes indicating error like 404, 500 etc.</u>
+          <br><u>Execute the sql now.</u>
+          <br>Look at the plot. It gives a data explorer on the output dataset.
+          <br><u>Plot the data.</u>
+          <br>You can also serve the plot on a different tab for better view.
+          <br><u>serve the plot.</u>
+          <br>Now ask for top error.
+          <br><u>Can you tell me one top error code for latency degradation? Limit your selection to one error code.</u>
+          <br>Ask for resolution.
+          <br><u>Looks like 500 is the real problem. Suggest some resolutions for this.</u>
+          <br>You can ask for more plans and drill down further as needed.
         </p>
       </div>
 
       <div class="feature-container">
         <p class="h6 text-center">MEDICAL EQUIPMENT MAINTENANCE SESSION</p>
-        <p class="text-gray">
+        <p class="text-white">
           You can follow the following chat script to understand the agents and lake.
-          In this chat, a technician is trying to do a preventive maintenance on
-          a Baxter medical pump.
-          <ul>
-            <li><i>I need help with Baxter infusion pump preventive maintenance</i></li>
-            <li><i>Assist me by naming all possible preventive maintenance for Baxter
-              SIGMA Spectrum Infusion Pump. Do not provide details.</i></li>
-            <li><i>Query the servicerecord to show me the PM needed for this pump.</i></li>
-            <br> LitenAI looks into service History and outputs the PMs due right now.
-            Pump Operation Test is due right now.
-            <li><i>Show me the last 3 PMs done on this pump for last 12 months.</i></li>
-            LitenAI looks into service History and outputs the list of PMs and Dates
-            completed.
-            <li><i>Provide me exact names of test that are part of Pumps Operation Test.
-              Don't include any details on the steps.
-            </i></li>
-            <li><i>Show me the exact setup steps for Pump Operations Test.
-              Do not provide details.
-            </i></li>
-            Chatbot answers from summary in the manual including the setup this image.
-            <li><i>
-              From Baxter test manual show me the Test Setup Image for Pump Operation Test.
-            </i></li>
-            <li><i>
-              Show me the exact initial steps for Flow Rate Accuracy Test without any
-              details.
-            </i></li>
-            LitenAI answers from summary in the manual including the setup this image.
-            <li><i>
-              Show me exact steps for Volumetric Test for Baxter SIGMA Pump without any
-              details. Show the image of test also.
-            </i></li>
-            <li><i>Show me the image for this test</i></li>
-            <li><i>
-              Provide me exact steps for Battery Capacity Test without any details
-            </i></li>
-            <li><i>
-              Assist me with the Preventive Maintenance Check Sheet for Pump Operation Test.
-            </i></li>
-            <li><i>
-              Assist me to generate the completed/filled Flow Rate Accuracy Test Report
-            </i></li>
-            <li><i>
-              Please generate the completed/filled Battery Capacity Test Report
-            </i></li>
-          </ul>
+          In this chat, a technician is performing maintenance on Baxter medical pump.
+          <br><u>I need help with Baxter infusion pump preventive maintenance</u>
+          <br><u>Assist me by naming all possible preventive maintenance for Baxter
+            SIGMA Spectrum Infusion Pump. Do not provide details.</u>
+          <br><u>Query the servicerecord to show me the PM needed for this pump.</u>
+          <br> LitenAI looks into service History and outputs the PMs due right now.
+          Pump Operation Test is due right now.
+          <br><u>Show me the last 3 PMs done on this pump for last 12 months.</u>
+          <br>LitenAI looks into service History and outputs the list of PMs and Dates
+          completed. In the next prompt, ask to use rag agent only. This way, it will
+          pick the information from ingested manuals.
+          <br><u>Use rag agent to provide me exact names of test that are part of Pumps Operation Test. Dont include any details on the steps.</u>
+          <br>This performs a retreival and augmentation to give answer from ingested manuals.
+          <br><u>Show me the exact setup steps for Pump Operations Test.
+            Do not provide details.</u>
+          <br>Chatbot answers from summary in the manual including the setup this image.
+          <br><u>
+            From Baxter test manual show me the Test Setup Image for Pump Operation Test.
+          </u>
+          <br><u>
+            Show me the exact initial steps for Flow Rate Accuracy Test without any
+            details.
+          </u>
+          <br>LitenAI answers from summary in the manual including the setup this image.
+          <br><u>
+            Show me exact steps for Volumetric Test for Baxter SIGMA Pump without any
+            details. Show the image of test also.
+          </u>
+          <br><u>
+            Provide me exact steps for Battery Capacity Test without any details
+          </u>
+          <br><u>
+            Assist me with the Preventive Maintenance Check Sheet for Pump Operation Test.
+          </u>
+          <br><u>
+            Assist me to generate the completed/filled Flow Rate Accuracy Test Report in text
+          </u>
+          <br><u>
+            Please generate the completed/filled Battery Capacity Test Report in text
+          </u>
         </p>
       </div>
 
       <div class="feature-container">
         <p class="h6 text-center">INGEST UNSTRUCTURED DATA</p>
-        <p class="text-gray">
-        To add unstructured data like pdf, text, html, or any other media files, pick the
-        tab named 'Lake' from main display. Pick the file under the heading.
-        <br><code>Ingest unstructured data like pdf, text, html etc.</code>
-        <br>Click on ingest. It ingests all the data and indexes with embeddings to enable
-        semantic search as well RAG (retreival augmented generation) flow.
-        <br>You can add all your knowledge including pdf manuals, trouble shooting
-        guidelines, standard operating procedures etc. LitenAI agents tune their
-        response using this data. Note that none of this is shared with Liten or LLM,
-        it all sits within customer lake.
-        </p>
+        <p class="text-white">
+          To add unstructured data, such as PDFs, text, HTML, or other media files, select the tab named "Lake" from the main display. Choose the file under the heading:
+          <br><code>Ingest unstructured data like PDF, text, HTML, etc.</code>
+          <br>Click "Ingest." This will ingest all the data and index it with embeddings to enable semantic search as well as Retrieval-Augmented Generation (RAG) flow.
+          <br>You can add your knowledge base, including PDF manuals, troubleshooting guidelines, standard operating procedures, etc. LitenAI agents then use this data to refine their responses. Note that none of this data is shared with Liten or LLM; it remains entirely within your customer lake.
+        </p>        
       </div>
+      
       <div class="feature-container">
         <p class="h6 text-center">INGEST STRUCTURED DATA</p>
-        <p class="text-gray">
-        To add structured data from files containing structured logs or other tables,
-        first pick the tab named 'Lake' from main display. Look at the following section.
-        <br><code>Ingest csv or json. Infer new structures from file, and create table
-        below.</code>
-        <br>All ingested structured data get appended to selected table.
-        <br>If a table with that structure, already exists, pick the table from top.
-        Choose the file. Supported file types are csv or json. Pick the options and
-        then Ingest. It would add the data to the tables. 'Chat' tab shows the response.
-        <br>If a table with file structure does not exist, it should first be created.
-        Pick the table from top, it would show a sample json structure in the section
-        titled.
-        <br><code>Table Structure</code><br>
-        To infer this from the selected file, enter a unique table name below this,
-        and click on InferDesc. It shows the table structure json inferred above.
-        Sometimes, the timestamp columns are not inferred properly. You may want to
-        add this manually if timestamp is of importance. The fields are following
-        <br><code>  "timeseries": "timestamp", "timeseries_format": "yyyy-MM-dd HH:mm:ss.SSS"</code>
-        <br>Click on create button.
-        <br>If successful, it would add it to be Table list and select it as an active table.
-        <br>Now you can ingest the file by clicking on ingest button below the Ingest csv line.
-        <br>Now you have added your structured logs to lake. This log can be reasoned our
-        using LitenAI agents described above. Please go ahead and try out your reasoning
-        scenarios.
-        </p>
+        <p class="text-white">
+          To add structured data from files containing logs or tables, first select the "Lake" tab from the main display. Refer to the following section:
+          <br><code>Ingest CSV or JSON. Infer new structures from file and create table below.</code>
+          <br>All ingested structured data will be appended to the selected table.
+          <br>If a table with the same structure already exists, select it from the top. Choose the file. Supported file types are CSV or JSON. Select the options, then click "Ingest" to add the data to the tables. The "Chat" tab will show the response.
+          <br>If a table matching the file structure does not exist, it must be created first. Select the table from the top; a sample JSON structure will appear in the section titled:
+          <br><code>Table Structure</code><br>
+          To infer this from the selected file, enter a unique table name below, then click "InferDesc." This will display the inferred table structure JSON above.
+          Sometimes, timestamp columns are not inferred correctly. If timestamp data is important, you may need to add it manually. Use the following fields:
+          <br><code>"timeseries": "timestamp", "timeseries_format": "yyyy-MM-dd HH:mm:ss.SSS"</code>
+          <br>Click the "Create" button.
+          <br>If successful, this will add the table to the Table list and set it as the active table.
+          <br>Now you can ingest the file by clicking the "Ingest" button below the "Ingest CSV" line.
+          <br>Your structured logs are now added to the lake. These logs can be analyzed using LitenAI agents as described above. Try out your reasoning scenarios.
+        </p>        
       </div>
       <div class="feature-container">
         <p class="h6 text-center">CONNECT TO YOUR DATA SOURCE</p>
-        <p class="text-gray">
-        LitenAI can read or stream data from existing data sources.
-        It does not need to be ingested in Liten lake. Please contact us to know
-        how we can ingest your data sources.
+        <p class="text-white">
+          LitenAI can read or stream data from existing data sources.
+          It does not need to be all ingested in the lake. Please contact us to know
+          how we can ingest your data sources.
         </p>
-    </div>
-    <!-- earlyaccess End -->
+      </div>
+      <!-- earlyaccess End -->
 
-    <!-- Footer Start -->
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <p class="col-md-4 mb-0 text-gray">&copy; 2024 LitenAI</p>
-        <ul class="nav col-md-5 justify-content-center">
-          <li class="nav-item"><a href="index.html#home" class="nav-link px-2 link-gray">Home</a></li>
-          <li class="nav-item"><a href="index.html#product" class="nav-link px-2 link-gray">Product</a></li>
-          <li class="nav-item"><a href="solutions.html" class="nav-link px-2 link-gray">Solutions</a></li>
-          <li class="nav-item"><a href="blogs.html" class="nav-link px-2 link-gray">Blogs</a></li>
-          <li class="nav-item"><a href="index.html#about" class="nav-link px-2 link-gray">Contact</a></li>
-          <li class="nav-item"><a href="earlyaccess.html" class="nav-link px-2 link-gray">Try It Now</a></li>
-        </ul>
-      </footer>
-    </div>
-    <!-- Footer End -->
+      <!-- Footer Start -->
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <p class="col-md-4 mb-0 text-white">&copy; 2024 LitenAI</p>
+          <ul class="nav col-md-5 justify-content-center">
+            <li class="nav-item"><a href="index.html#home" class="nav-link px-2 link-gray">Home</a></li>
+            <li class="nav-item"><a href="index.html#product" class="nav-link px-2 link-gray">Product</a></li>
+            <li class="nav-item"><a href="solutions.html" class="nav-link px-2 link-gray">Solutions</a></li>
+            <li class="nav-item"><a href="blogs.html" class="nav-link px-2 link-gray">Blogs</a></li>
+            <li class="nav-item"><a href="index.html#about" class="nav-link px-2 link-gray">Contact</a></li>
+            <li class="nav-item"><a href="earlyaccess.html" class="nav-link px-2 link-gray">Try It Now</a></li>
+          </ul>
+        </footer>
+      </div>
+      <!-- Footer End -->
   </body>
 </html>
