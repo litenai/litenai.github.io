@@ -2,6 +2,30 @@ body {
     background-color: black;
 }
 
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 a.link-gray {
     color: #A0A0A0;
 }
@@ -20,7 +44,7 @@ hr {
 }
 
 .container-bg-teal {
-    background: #008080 
+    background: #008080
 }
 
 .container-bg-darkteal {
@@ -68,7 +92,7 @@ div.navbar1 > ul {
 }
 
 div.navbar1 > img {
-    width: 80px;
+    width: 120px;
     height: auto;
 }
 
@@ -86,7 +110,7 @@ div.navbar1 > img {
 {
   text-decoration: none;
   color: #232323;
-  
+
   transition: color 0.3s ease;
 }
 
@@ -104,12 +128,12 @@ div.navbar1 > img {
   position: absolute;
   top: -7px;
   left: -5px;
-  
+
   cursor: pointer;
-  
+
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-  
+
   -webkit-touch-callout: none;
 }
 
@@ -123,14 +147,14 @@ div.navbar1 > img {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  
+
   background: #cdcdcd;
   border-radius: 3px;
-  
+
   z-index: 1;
-  
+
   transform-origin: 4px 0px;
-  
+
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
@@ -146,7 +170,7 @@ div.navbar1 > img {
   transform-origin: 0% 100%;
 }
 
-/* 
+/*
  * Transform all the slices of hamburger
  * into a crossmark.
  */
@@ -186,15 +210,15 @@ div.navbar1 > img {
   padding: 50px;
   padding-top: 125px;
   border-radius: 10px;
-  
+
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-  
+
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  
+
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
@@ -442,6 +466,11 @@ div.feature-container > div.summary > a > button {
     padding: 0;
 }
 
+.about img {
+    width: 120px;
+    height: auto;
+}
+
 .playground {
     background-color: black;
     width: 90%;
@@ -535,7 +564,7 @@ div.feature-container > div.summary > a > button {
     .title-small {
         display: block;
     }
-    
+
     .title-large {
         display: none;
     }
