@@ -13,21 +13,25 @@ sudo npm install -g firebase-tools
 ```
 2. Login to firebase
 ```
-    firebase login
-    ```
+firebase login
+```
+Sometimes, you may need to logout to ensure that the projects are picked up.
+```
+firebase logout
+```
 3. Initialize firebase. Needs to be done only once.
-   ```
-    firebase init
-    ```
-    Pick Hosting option for Firbase hosting.
+```
+firebase init hosting
+```
+Pick default hosting option for Firbase hosting.
 4. Copy files to be released in public directory.
 5. Check the site locally
-   ```
-    firebase serve
-    ```
+```
+firebase serve
+```
 6. Deploy the site
-   ```
-    firebase deploy
-    ```
+```
+firebase deploy
+```
 
 Look at google firebase docs for more details.
