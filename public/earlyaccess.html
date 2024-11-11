@@ -127,9 +127,9 @@
               <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">docker website.</a>
             </li>
             <li>
-              Load the image from the downloaded image.For this load the image as shown below.
+              Load the image from the downloaded image. For this load the image as shown below. Replace version in the command shown below with the correct number.
               <a href="https://docs.docker.com/reference/cli/docker/image/load">Click here for more details.</a>
-              <br><code>docker load < litenai.v0.0.81.tar.gz</code><br>
+              <br><code>docker load < litenai.<i>version</i>.tar.gz</code><br>
             </li>
             <li>
               The image should now be in docker images. This should show
@@ -152,8 +152,8 @@
           key if a local install is being used. It should be OpenAI API compatible.
           <br><code>export LITENAI_API_KEY="api_key"</code>
           <br>Now you can run the docker command for log reasoning.
-          Replace the version with the correct tag.
-          <br><code> docker run -d --rm --name litenai_container -p 8080:8080 -p 8210:8210 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} litenai/litenai:0.0.81 </code>
+          Replace the latest with the correct tag.
+          <br><code> docker run -d --name litenai_container -p 8210:8210 -p 8220:8220 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} litenai/litenai:latest </code>
           <br>It takes a few minutes for LitenAI service to start. See below for some
           sample log reason chats. In the chatbot, in the side panel, you would also
           see saved chats.
@@ -173,8 +173,8 @@
           such as medical devices, LitenAI provides an agentic onfiguration with sample
           lake tuned to assist field technicians providing technical support for medical
           and industrial device. If you wish to use in this techassist mode,
-          please use the following docker run command.
-          <br><code>docker run -d --rm --name liten_container -p 8080:8080 -p 8210:8210 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_AGENTIC_MODE="techassist" -e LITENAI_LAKE_URL="/srv/lake/techassist" litenai/litenai:0.0.81</code>
+          please use the following docker run command. Replace the latest with correct tag.
+          <br><code>docker run -d --name liten_container -p 8210:8210 -p 8220:8220 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_AGENTIC_MODE="techassist" -e LITENAI_LAKE_URL="/srv/lake/techassist" litenai/litenai:latest</code>
           <br>These agentic modes are data driven configurations and can be tuned to customer
           specifications.
           
@@ -187,7 +187,7 @@
           <br><code>export LITENAI_LLM_MODEL="meta-llama/Llama-3.2-1B-Instruct"</code>
           <br>This is the docker run command. You can use docker environment variables to
           use the correct run modes.
-          <br><code>docker run -d --rm --name liten_container -p 8080:8080 -p 8210:8210 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_SERVE_URL=${LITENAI_SERVE_URL} -e LITENAI_LLM_MODEL=${LITENAI_LLM_MODEL} -e LITENAI_AGENTIC_MODE=${LITENAI_AGENTIC_MODE} -e LITENAI_LAKE_URL=${LITENAI_LAKE_URL} litenai/litenai:0.0.81</code>
+          <br><code>docker run -d --name liten_container -p 8080:8080 -p 8210:8210 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_SERVE_URL=${LITENAI_SERVE_URL} -e LITENAI_LLM_MODEL=${LITENAI_LLM_MODEL} -e LITENAI_AGENTIC_MODE=${LITENAI_AGENTIC_MODE} -e LITENAI_LAKE_URL=${LITENAI_LAKE_URL} litenai/litenai:latest</code>
         </p>
       </div>
 
