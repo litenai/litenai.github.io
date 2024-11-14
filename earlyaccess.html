@@ -100,13 +100,16 @@
           engineering bottlenecks.
 
         </p>
+      </div>
+      <div class="feature-container">
+        <p class="h6 text-center">TRY IT NOW!</p>
         <p class="text-white text-center">
-          Now available in early access, LitenAI can be deployed on public
-          clouds with pre-configured agent workflows and data lakes. Users
-          can evaluate its capabilities by uploading their data, or they
-          can run it as a Docker image within secure data networks. To join
-          the early access program or learn more, please
-          <a href="index.html#about" class="link-teal"> contact us.</a>
+          Now available in early access, you can try our chat interface by
+          logging into <a href="http://34.41.57.3:8210/">LitenAI account</a>.
+          LitenAI can be deployed on public clouds with pre-configured agent workflows
+          Users can also evaluate it locally as a Docker image within secure data
+          networks. If you need an account or for early access, please
+           <a href="index.html#about" class="link-teal"> contact us.</a>
         </p>
       </div>
 
@@ -177,7 +180,7 @@
           <br><code>docker run -d --name liten_container -p 8210:8210 -p 8220:8220 -p 8221:8221 -e LITENAI_API_KEY=${LITENAI_API_KEY} -e LITENAI_AGENTIC_MODE="techassist" -e LITENAI_LAKE_URL="/srv/lake/techassist" litenai/litenai:latest</code>
           <br>These agentic modes are data driven configurations and can be tuned to customer
           specifications.
-          
+
           <br>LitenAI can also use locally served LLMs. We also provide pre-built
           images to serve in customer networks. We can help with deploying and serving
           LLMs of interest. If being served locally, the url to be used for LLM call and
@@ -280,9 +283,9 @@
           <br><code>Ingest unstructured data like PDF, text, HTML, etc.</code>
           <br>Click "Ingest." This will ingest all the data and index it with embeddings to enable semantic search as well as Retrieval-Augmented Generation (RAG) flow.
           <br>You can add your knowledge base, including PDF manuals, troubleshooting guidelines, standard operating procedures, etc. LitenAI agents then use this data to refine their responses. Note that none of this data is shared with Liten or LLM; it remains entirely within your customer lake.
-        </p>        
+        </p>
       </div>
-      
+
       <div class="feature-container">
         <p class="h6 text-center">INGEST STRUCTURED DATA</p>
         <p class="text-white">
@@ -299,7 +302,7 @@
           <br>If successful, this will add the table to the Table list and set it as the active table.
           <br>Now you can ingest the file by clicking the "Ingest" button below the "Ingest CSV" line.
           <br>Your structured logs are now added to the lake. These logs can be analyzed using LitenAI agents as described above. Try out your reasoning scenarios.
-        </p>        
+        </p>
       </div>
       <div class="feature-container">
         <p class="h6 text-center">CONNECT TO YOUR DATA SOURCE</p>
